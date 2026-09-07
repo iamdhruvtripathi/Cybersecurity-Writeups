@@ -167,7 +167,7 @@ http.request.method == "POST" and frame.len > 600
 
 ### What is the flag found in the exfiltrated data through ICMP?
 
-- We can search for large frame sizes and we can see the flag in one the packets
+- We can search for large frame sizes and we can see the flag in one of the packets
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8d3df107-a2ba-4b34-bc5b-b238c20b1746" />
 </p>
