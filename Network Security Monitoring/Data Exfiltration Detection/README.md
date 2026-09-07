@@ -173,3 +173,21 @@ http.request.method == "POST" and frame.len > 600
 </p>
 
 - Answer: `THM{1cmp_3ch0_3xf1ltr4t10n_succ3ss}`
+
+## Skills Learned
+- dentified signs of data exfiltration across different network protocols
+- Analyzed suspicious DNS traffic and recognized potential DNS tunneling activity
+- Investigated long and repeated DNS queries using Wireshark filters
+- Applied Splunk queries to narrow down suspicious network activity and identify compromised hosts
+- Correlated source IPs, destination IPs, and payload sizes to detect unusual traffic patterns
+- Examined FTP traffic and followed TCP streams to uncover transferred files and hidden data
+- Detected suspicious HTTP POST requests associated with large data transfers
+- Investigated ICMP traffic for signs of data exfiltration
+- Extracted hidden flags and information from network streams using Wireshark
+- Distinguished between legitimate network traffic and potentially malicious activity based on traffic characteristics
+- Identified suspicious hosts by analyzing unusually large payloads and repeated network requests
+- Used packet size and protocol-specific filters to narrow down potentially malicious traffic
+
+## Conclusion
+
+This room provided hands-on experience with detecting data exfiltration through different network channels such as DNS, FTP, HTTP, and ICMP. Throughout the room, I analyzed network traffic with Wireshark, used Splunk to investigate suspicious logs, identified compromised internal hosts, and extracted hidden information from network streams. Overall, this room strengthened my ability to investigate suspicious network activity and recognize different techniques attackers can use to exfiltrate sensitive data
