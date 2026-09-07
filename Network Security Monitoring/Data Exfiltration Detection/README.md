@@ -78,3 +78,58 @@ index="data_exfil" sourcetype="DNS_logs" | where len(query) > 30
 </p>
 
 - Answer: `192.168.1.103`
+
+## Task 5
+
+### How many connections were observed from the guest account?
+- I scrolled down until I found the guest accounts
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/803bbf54-cca3-404c-b6b2-5c6e6461bc68" />
+</p>
+
+- Then, we can apply the `USER guest\r\n` as a filter
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/152f885d-69f6-40b2-a425-0e66d9909540" />
+</p>
+
+- We can now see how many guest accounts there are in total
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/d7eb697f-afea-4a43-9bc5-fd4a13c3b74f" />
+</p>
+
+- Answer: `5`
+
+### Apply the filter; what is the name of the customer-related file exfiltrated from the root account?
+
+- We can do the same thing here as the last question and apply a filter on `USER root\r\n`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f02952b4-1d60-4227-ba0e-9ae87f280755" />
+</p>
+
+- Hovering over the first packet, we see the file name
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/01fe7481-f536-4b23-927d-3ed9e8456f8e" />
+</p>
+
+- Answer: `customer_data.xlsx`
+
+### Which internal IP was found to be sending the largest payload to an external IP?
+
+- For this one, we can search for length of the frame greater than `90`. Looking at the filtered packets, we can see the largest length with the `USER` as `guest` an the associated IP address
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8229378f-3ab9-4919-bffa-893db1db5e57" />
+</p>
+
+- Answer: `192.168.1.105`
+
+### What is the flag hidden inside the ftp stream transferring the CSV file to the suspicious IP?
+
+- We can follow the `TCP stream` and see the flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/ea08de20-bf01-4a5e-a28e-5b23806f1724" />
+</p>
+
+- Answer: `THM{ftp_exfil_hidden_flag}`
