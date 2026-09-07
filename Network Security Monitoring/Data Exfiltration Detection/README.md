@@ -137,7 +137,7 @@ index="data_exfil" sourcetype="DNS_logs" | where len(query) > 30
 ## Task 6
 ### Which internal compromised host was used to exfiltrate this sensitive data?
 
-- Using the query, we can see this was the only internal host with the largest payload size
+- Using the query, we can see this was the only internal host which sent out the largest payload size
 ```
 index="data_exfil" sourcetype="http_logs" method=POST bytes_sent > 600 | table _time src_ip uri domain dst_ip bytes_sent | sort - bytes_sent
 ```
