@@ -117,7 +117,7 @@ index="data_exfil" sourcetype="DNS_logs" | where len(query) > 30
 
 ### Which internal IP was found to be sending the largest payload to an external IP?
 
-- For this one, we can search for length of the frame greater than `90`. Looking at the filtered packets, we can see the largest length with the `USER` as `guest` an the associated IP address
+- For this one, we can search for length of the frame greater than `90`. Looking at the filtered packets, we can see the largest length with the `USER` as `guest` and the associated IP address
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8229378f-3ab9-4919-bffa-893db1db5e57" />
 </p>
