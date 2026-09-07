@@ -133,3 +133,43 @@ index="data_exfil" sourcetype="DNS_logs" | where len(query) > 30
 </p>
 
 - Answer: `THM{ftp_exfil_hidden_flag}`
+
+## Task 6
+### Which internal compromised host was used to exfiltrate this sensitive data?
+
+- Using the query, we can see this was the only internal host with the largest payload size
+```
+index="data_exfil" sourcetype="http_logs" method=POST bytes_sent > 600 | table _time src_ip uri domain dst_ip bytes_sent | sort - bytes_sent
+```
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/09ed0e12-a9e3-4346-9410-e7e2db30846c" />
+</p>
+
+- Answer: `192.168.1.103`
+
+### What's the flag hidden inside the exfiltrated data?
+
+- We can use Wireshark to find the flag. Here, we can search for frame length greater than `600`. We notice it is the same exact source and destination IP and uploading to the same place
+```
+http.request.method == "POST" and frame.len > 600
+```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1d7cfb95-74bc-4f20-97d0-e1acd00c0d0c" />
+</p>
+
+- Following the `TCP Stream`, we get the flag
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/b9e7c757-9c1d-400e-bd8b-6e8b9f435634" />
+</p>
+
+- Answer: `THM{http_raw_3xf1ltr4t10n_succ3ss}`
+
+### What is the flag found in the exfiltrated data through ICMP?
+
+- We can search for large frame sizes and we can see the flag in one the packets
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8d3df107-a2ba-4b34-bc5b-b238c20b1746" />
+</p>
+
+- Answer: `THM{1cmp_3ch0_3xf1ltr4t10n_succ3ss}`
