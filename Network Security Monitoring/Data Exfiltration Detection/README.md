@@ -67,7 +67,7 @@ dns && frame.len > 70
 
 ### Which local IP sent the maximum number of suspicious requests?
 
-- We can use Splunk to filter for this IP. However, we need to be careful because we need to remember that not all requests sent by these IP addresses are suspicious.  That's why I specified the length because other requests may be shorter than
+- We can use Splunk to filter for this IP. However, we need to be careful because we need to remember that not all requests sent by these IP addresses are suspicious.  That's why I specified the length because other requests may be shorter
 
 ```
 index="data_exfil" sourcetype="DNS_logs" | where len(query) > 30
