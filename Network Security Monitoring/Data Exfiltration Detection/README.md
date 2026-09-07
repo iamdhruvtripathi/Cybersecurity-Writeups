@@ -175,7 +175,7 @@ http.request.method == "POST" and frame.len > 600
 - Answer: `THM{1cmp_3ch0_3xf1ltr4t10n_succ3ss}`
 
 ## Skills Learned
-- dentified signs of data exfiltration across different network protocols
+- Identified signs of data exfiltration across different network protocols
 - Analyzed suspicious DNS traffic and recognized potential DNS tunneling activity
 - Investigated long and repeated DNS queries using Wireshark filters
 - Applied Splunk queries to narrow down suspicious network activity and identify compromised hosts
