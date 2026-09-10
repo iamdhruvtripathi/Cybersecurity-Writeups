@@ -49,13 +49,13 @@ arp && arp.src.proto_ipv4 == 192.168.10.1 && eth.src == 02:aa:bb:cc:00:01
 
 - Looking here, we can see the attacker starts associating the router's IP address to their MAC address tricking other devices in sending information to them
 
-<p align="center">
-<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/18bfb9a4-ba89-48fa-87aa-ab5d70bdaa35" />
-</p>
-
 ```
 arp.opcode == 2 && arp.src.proto_ipv4 == 192.168.10.1
 ```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/18bfb9a4-ba89-48fa-87aa-ab5d70bdaa35" />
+</p>
 
 - Answer: `02:fe:fe:fe:55:55`
 
