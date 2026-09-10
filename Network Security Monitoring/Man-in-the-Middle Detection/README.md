@@ -92,3 +92,44 @@ arp.src.proto_ipv4 == 192.168.10.1 &&  arp.isgratuitous
 </p>
 
 - Answer: `14`
+
+## Task 5
+### How many DNS responses were observed for the domain corp-login.acme-corp.local?
+
+- Using the query below, we can see the number of displayed packets
+
+```
+dns && dns.qry.name == "corp-login.acme-corp.local"
+```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/52837666-743c-45ed-a353-41981a4ffe54" />
+</p>
+
+- Answer: `211`
+
+### How many DNS requests were observed from the IPs other than 8.8.8.8?
+
+- Google's DNS server is `8.8.8.8` but if we look at any other IP address pretending to a DNS server, we see there are `2` fake DNS responses from the attacker's IP
+
+```
+dns.flags.response == 1 && ip.src != 8.8.8.8 && dns.qry.name == "corp-login.acme-corp.local"
+```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/6d529fb9-6b36-4106-a6d9-f1405edf016d" />
+</p>
+
+- Answer: `2`
+
+### What IP did the attacker’s forged DNS response return for the domain?
+
+- We can see what IP the attacker returned, it was their own IP address
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/09cba6e2-81f7-4874-8aaa-b340083c0a74" />
+</p>
+
+- Answer: `192.168.10.55`
+
+## Task 6
