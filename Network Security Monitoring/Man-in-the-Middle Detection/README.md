@@ -110,7 +110,7 @@ dns && dns.qry.name == "corp-login.acme-corp.local"
 
 ### How many DNS requests were observed from the IPs other than 8.8.8.8?
 
-- Google's DNS server is `8.8.8.8` but if we look at any other IP address pretending to a DNS server, we see there are `2` fake DNS responses from the attacker's IP
+- Google's DNS server is `8.8.8.8` but if we look at any other IP address pretending to be a DNS server, we can see there are `2` fake DNS responses from the attacker's IP
 
 ```
 dns.flags.response == 1 && ip.src != 8.8.8.8 && dns.qry.name == "corp-login.acme-corp.local"
