@@ -1,4 +1,4 @@
-<p align="center">
+<img width="1512" height="794" alt="image" src="https://github.com/user-attachments/assets/04cef2e2-ec53-4aad-ad57-3ff4804327d4" /><p align="center">
   <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="150" alt="TryHackMe Logo">
 </p>
 
@@ -133,3 +133,38 @@ dns.flags.response == 1 && ip.src != 8.8.8.8 && dns.qry.name == "corp-login.acme
 - Answer: `192.168.10.55`
 
 ## Task 6
+
+### How many POST requests were observed for our domain corp-login.acme-corp.local?
+
+- Filtering out packets, we can see there was only `1` HTTP POST request made to the domain
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/6559152b-b98b-4fad-a32f-f738cbea2739" />
+</p>
+
+- Answer: `1`
+
+### What's the password of the victim found in the plaintext after successful ssl stripping attack. 
+
+- The victim's password can be found under `HTML Form URL...`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/78d7c69b-a53b-4a36-b839-694a8f9cb75c" />
+</p>
+
+- Answer: `Secret123!`
+
+## Skills Learned
+
+- Identifying ARP spoofing and man in the middle attack activity in network traffic
+- Using Wireshark filters to analyze ARP packets and MAC address mappings
+- Detecting gratuitous ARP packets and duplicated IP address claims
+- Identifying forged DNS responses and DNS spoofing attempts
+- Analyzing DNS traffic to identify attacker controlled IP addresses
+- Detecting HTTP POST requests and inspecting plaintext form data
+- Understanding SSL stripping attacks and how credentials can be exposed
+- Using network traffic analysis to identify indicators of a man in the middle attack
+
+ ## Conclusion
+
+This room taught me how to detect different signs of a man in the middle attack by analyzing network traffic in Wireshark, including ARP spoofing, DNS spoofing, and SSL stripping, and how these attacks can be identified through suspicious MAC address mappings, forged DNS responses, and exposed plaintext credentials
