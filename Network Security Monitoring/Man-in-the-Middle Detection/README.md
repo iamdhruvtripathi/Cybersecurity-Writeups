@@ -169,7 +169,6 @@ dns.flags.response == 1 && ip.src != 8.8.8.8 && dns.qry.name == "corp-login.acme
 - Analyzing DNS traffic to identify attacker controlled IP addresses
 - Detecting HTTP POST requests and inspecting plaintext form data
 - Understanding SSL stripping attacks and how credentials can be exposed
-- Using network traffic analysis to identify indicators of a man in the middle attack
 
  ## Conclusion
 
