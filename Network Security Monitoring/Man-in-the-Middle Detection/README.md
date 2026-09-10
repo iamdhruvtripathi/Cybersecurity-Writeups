@@ -93,7 +93,7 @@ arp.src.proto_ipv4 == 192.168.10.1 &&  arp.isgratuitous
 
 - Answer: `14`
 
-## Task 5
+## Task 4
 ### How many DNS responses were observed for the domain corp-login.acme-corp.local?
 
 - Using the query below, we can see the number of displayed packets
@@ -132,7 +132,7 @@ dns.flags.response == 1 && ip.src != 8.8.8.8 && dns.qry.name == "corp-login.acme
 
 - Answer: `192.168.10.55`
 
-## Task 6
+## Task 5
 
 ### How many POST requests were observed for our domain corp-login.acme-corp.local?
 
