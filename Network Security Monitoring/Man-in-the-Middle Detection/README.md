@@ -31,6 +31,12 @@ Learn what MITM attack is, and how to identify the footprints of this attack in 
 
 ## Task 3
 
+### Continue to the next task.
+
+- Answer: `No answer needed`
+
+## Task 4
+
 ### How many ARP packets from the gateway MAC Address were observed?
 
 - Knowing the gateway's IP and MAC address, we can use the filter to figure out how many ARP packets there are
@@ -93,7 +99,7 @@ arp.src.proto_ipv4 == 192.168.10.1 &&  arp.isgratuitous
 
 - Answer: `14`
 
-## Task 4
+## Task 5
 ### How many DNS responses were observed for the domain corp-login.acme-corp.local?
 
 - Using the query below, we can see the number of displayed packets
@@ -132,7 +138,7 @@ dns.flags.response == 1 && ip.src != 8.8.8.8 && dns.qry.name == "corp-login.acme
 
 - Answer: `192.168.10.55`
 
-## Task 5
+## Task 6
 
 ### How many POST requests were observed for our domain corp-login.acme-corp.local?
 
