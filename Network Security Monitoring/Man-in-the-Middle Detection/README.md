@@ -92,5 +92,3 @@ arp.src.proto_ipv4 == 192.168.10.1 &&  arp.isgratuitous
 </p>
 
 - Answer: `14`
-
-## 
