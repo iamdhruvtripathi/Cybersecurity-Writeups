@@ -96,7 +96,7 @@ Learn how to use Snort to detect real-time threats, analyse recorded traffic fil
 
 - Answer: `full-blown`
 
-## NBA training period is also known as ...
+### NBA training period is also known as ...
 
 - `Behavior-based IPS` requires training to learn the baseline of what normal traffic looks like and how it can differentiate from malicious traffic
 
