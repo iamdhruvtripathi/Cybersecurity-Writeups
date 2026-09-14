@@ -105,3 +105,41 @@ Learn how to use Snort to detect real-time threats, analyse recorded traffic fil
 </p>
 
 - Answer: `baselining`
+
+## Task 4
+### Run the Snort instance and check the build number.
+
+- Running `snort -V`, we can see the build number
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f76a6149-6d65-483e-9f68-adefba7e1059" />
+</p>
+
+- Answer: `149`
+
+### Test the current instance with "/etc/snort/snort.conf" file and check how many rules are loaded with the current build.
+
+- We can test the current instance with `snort -c /etc/snort/snort.conf -T` and we can see the number of rules loaded
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/96450d4b-5839-4963-a95f-a21adfb19ae9" />
+</p>
+
+- Answer: `4151`
+
+### Test the current instance with "/etc/snort/snortv2.conf" file and check how many rules are loaded with the current build.
+
+- Running `snort -c /etc/snort/snortv2.conf -T` gives us the number of rules
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/554eb830-7c05-47e5-b48c-a924af0ee874" />
+</p>
+
+- Answer: `1`
+
+## Task 5
+## Task 6
+## Task 7
+## Task 8
+## Task 9
+## Task 10
