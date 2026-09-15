@@ -144,6 +144,71 @@ Learn how to use Snort to detect real-time threats, analyse recorded traffic fil
 
 ## Task 6
 
+## Investigate the traffic with the default configuration file with ASCII mode. `sudo snort -dev -K ASCII -l .` Execute the traffic generator script and choose "TASK-6 Exercise". Wait until the traffic ends, then stop the Snort instance. Now analyse the output summary and answer the question. `sudo ./traffic-generator.sh` Now, you should have the logs in the current directory. Navigate to folder "145.254.160.237". What is the source port used to connect port 53?
+
+- We can run both commands below
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1906c85e-833f-40da-a4fc-6f0293a8b2e0" />
+</p>
+
+- Note that when I ran `sudo ./traffic-generator.sh`, I selected `TASK-6 Exercise`
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/4b2c4b6c-9dd3-4774-8c7c-2565ed9698a5" />
+</p>
+
+- We can see here snort split it up by IP addresses and the one we are interested in is the `145.254.160.237` folder and we can see the source port there
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/c6e21597-3edd-4f74-b42c-fd4b056f479b" />
+</p>
+
+- Answer: `3009`
+
+## Use snort.log.1640048004. Read the snort.log file with Snort; what is the IP ID of the 10th packet? `snort -r snort.log.1640048004 -n 10`
+
+- I first navigated into the `TASK-6` folder and then ran `snort -r snort.log.1640048004 -n 10`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/986c09f4-4c17-401f-b30d-14ca96af8e2c" />
+</p>
+
+- Scrolling down to the tenth packet, we can see the IP ID
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/bb0fdd3e-92c0-484d-b6f6-5af8778ef6b6" />
+</p>
+
+- Answer: `49313`
+
+### Read the "snort.log.1640048004" file with Snort; what is the referer of the 4th packet?
+
+- For this, I ran `snort -r snort.log.1640048004 -n 10 -X` because it would be helpful to display the full packet details and scrolling down to the fourth packet, we can see the referrer
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/4c44be79-dc0f-4d44-b480-b0bb9e27695b" />
+</p>
+
+- Answer: `http://www.ethereal.com/development.html`
+
+### Read the "snort.log.1640048004" file with Snort; what is the Ack number of the 8th packet?
+
+- Scrolling down to the eight packet, we can see the ACK number
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/46ea3fed-bdcb-43c1-9407-e396055e0e01" />
+</p>
+
+- Answer: `0x38AFFFF3`
+
+### Read the "snort.log.1640048004" file with Snort; what is the number of the "TCP port 80" packets?
+
+- For this one we can use something called a berkeley packet filter (BPF). This filter allows to tell Snort which packets we want to see
+```
+snort -r snort.log.1640048004 tcp and port 80
+```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/3cc2a56c-c210-4ad7-9308-a3adfd92d950" />
+</p>
+
+- Answer: `41`
 
 ## Task 7
 ## Task 8
