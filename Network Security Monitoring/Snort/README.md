@@ -199,7 +199,7 @@ Learn how to use Snort to detect real-time threats, analyse recorded traffic fil
 
 ### Read the "snort.log.1640048004" file with Snort; what is the number of the "TCP port 80" packets?
 
-- For this one we can use something called a berkeley packet filter (BPF). This filter allows to tell Snort which packets we want to see
+- For this one we can use something called a berkeley packet filter (BPF). This filter allows us to tell Snort which packets we want to see
 ```
 snort -r snort.log.1640048004 tcp and port 80
 ```
