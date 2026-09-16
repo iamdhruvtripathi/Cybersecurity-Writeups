@@ -144,7 +144,7 @@ Learn how to use Snort to detect real-time threats, analyse recorded traffic fil
 
 ## Task 6
 
-## Investigate the traffic with the default configuration file with ASCII mode. `sudo snort -dev -K ASCII -l .` Execute the traffic generator script and choose "TASK-6 Exercise". Wait until the traffic ends, then stop the Snort instance. Now analyse the output summary and answer the question. `sudo ./traffic-generator.sh` Now, you should have the logs in the current directory. Navigate to folder "145.254.160.237". What is the source port used to connect port 53?
+### Investigate the traffic with the default configuration file with ASCII mode. `sudo snort -dev -K ASCII -l .` Execute the traffic generator script and choose "TASK-6 Exercise". Wait until the traffic ends, then stop the Snort instance. Now analyse the output summary and answer the question. `sudo ./traffic-generator.sh` Now, you should have the logs in the current directory. Navigate to folder "145.254.160.237". What is the source port used to connect port 53?
 
 - We can run both commands below
 
@@ -212,7 +212,7 @@ snort -r snort.log.1640048004 tcp and port 80
 
 ## Task 7
 
-## Investigate the traffic with the default configuration file. `sudo snort -c /etc/snort/snort.conf -A full -l .` Execute the traffic generator script and choose "TASK-7 Exercise". Wait until the traffic stops, then stop the Snort instance. Now analyse the output summary and answer the question. `sudo ./traffic-generator.sh`What is the number of the detected HTTP GET methods?
+### Investigate the traffic with the default configuration file. `sudo snort -c /etc/snort/snort.conf -A full -l .` Execute the traffic generator script and choose "TASK-7 Exercise". Wait until the traffic stops, then stop the Snort instance. Now analyse the output summary and answer the question. `sudo ./traffic-generator.sh`What is the number of the detected HTTP GET methods?
 
 - We can run both these commands in separate terminals where in the left terminal, `-A` is alert mode and we want `full` where Snort displays all possible information about the alert
 
