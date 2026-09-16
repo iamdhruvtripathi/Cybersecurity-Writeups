@@ -211,6 +211,27 @@ snort -r snort.log.1640048004 tcp and port 80
 - Answer: `41`
 
 ## Task 7
+
+### Investigate the traffic with the default configuration file. `sudo snort -c /etc/snort/snort.conf -A full -l .` Execute the traffic generator script and choose "TASK-7 Exercise". Wait until the traffic stops, then stop the Snort instance. Now analyse the output summary and answer the question. `sudo ./traffic-generator.sh`What is the number of the detected HTTP GET methods?
+
+- We can run both these commands in separate terminals where in the left terminal, `-A` is alert mode and we want `full` where Snort displays all possible information about the alert
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/dc73d7e5-cb96-4e7e-858f-81baa8a59c43" />
+</p>
+
+- Note that I selected `TASK-7 Exercise` to generate the traffic
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/82e9fc33-9860-4b0b-81e2-b50a631e6265" />
+</p>
+
+- After clicking `Ctrl + C`, we can see summary and the number of detected HTTP GET methods
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8bc09b42-7e0f-4abd-9276-7caef9e99bda" />
+</p>
+
+- Answer: `2`
+
 ## Task 8
 ## Task 9
 ## Task 10
