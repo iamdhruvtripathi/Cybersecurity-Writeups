@@ -164,7 +164,7 @@ Learn how to use Snort to detect real-time threats, analyse recorded traffic fil
 
 - Answer: `3009`
 
-## Use snort.log.1640048004. Read the snort.log file with Snort; what is the IP ID of the 10th packet? `snort -r snort.log.1640048004 -n 10`
+### Use snort.log.1640048004. Read the snort.log file with Snort; what is the IP ID of the 10th packet? `snort -r snort.log.1640048004 -n 10`
 
 - I first navigated into the `TASK-6` folder and then ran `snort -r snort.log.1640048004 -n 10`
 
