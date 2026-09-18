@@ -292,7 +292,7 @@ snort -r snort.log.1640048004 tcp and port 80
 
 ### Investigate the mx-2.pcap and mx-3.pcap files with the default configuration file. `sudo snort -c /etc/snort/snort.conf -A full -l . --pcap-list="mx-2.pcap mx-3.pcap"` What is the number of the generated alerts?
 
-- Same thing here but with a different `.pcap.` file
+- Same thing here but with a different `.pcap` file
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f0b7bbbb-fbe9-4488-a588-db0f807d5ef9" />
