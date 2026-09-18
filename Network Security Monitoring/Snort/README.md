@@ -241,5 +241,65 @@ snort -r snort.log.1640048004 tcp and port 80
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/09749479-9886-4e74-afb6-95a2e72aa255" />
 </p>
 
+- Answer: `170`
+
+### Keep reading the output. How many TCP Segments are Queued?
+
+- We can see how many TCP segments are queued
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/c8ec6159-2ce8-4a78-be0f-cecd00993758" />
+</p>
+
+- Answer: `18`
+
+### Keep reading the output.How many "HTTP response headers" were extracted?
+
+- Scrolling down a bit, we can see how many `HTTP response headers` were extracted
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/4ef993fa-35b9-408f-8cd4-e4b5ce0e5517" />
+</p>
+
+- Answer: `3`
+
+### Investigate the mx-1.pcap file with the second configuration file. `sudo snort -c /etc/snort/snortv2.conf -A full -l . -r mx-1.pcap` What is the number of the generated alerts?
+
+- Under `Action Stats:`, we can see how many alerts there are
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1b3009cd-6dcf-4bd4-bb33-bc95b10c9af0" />
+</p>
+
+- Answer: `68`
+
+### Investigate the mx-2.pcap file with the default configuration file. `sudo snort -c /etc/snort/snort.conf -A full -l . -r mx-2.pcap` What is the number of the generated alerts?
+
+- We do the same thing here but with a different `.pcap` file
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/65775767-bbdd-4b3e-92e9-6305dfd1ed10" />
+</p>
+
+- Answer: `340`
+
+### Keep reading the output. What is the number of the detected TCP packets?
+
+- Under `Breakdown by protocol`, we can see the number of detected TCP packets
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/290e3fbd-18ab-4a24-8056-4ecb91809ca5" />
+</p>
+
+- Answer: `82`
+
+### Investigate the mx-2.pcap and mx-3.pcap files with the default configuration file. `sudo snort -c /etc/snort/snort.conf -A full -l . --pcap-list="mx-2.pcap mx-3.pcap"` What is the number of the generated alerts?
+
+- Same thing here but with a different `.pcap.` file
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f0b7bbbb-fbe9-4488-a588-db0f807d5ef9" />
+</p>
+
+- Answer: `1020`
+
+
 ## Task 9
 ## Task 10
