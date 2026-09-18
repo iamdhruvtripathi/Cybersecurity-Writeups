@@ -233,5 +233,13 @@ snort -r snort.log.1640048004 tcp and port 80
 - Answer: `2`
 
 ## Task 8
+
+### Investigate the mx-1.pcap file with the default configuration file. `sudo snort -c /etc/snort/snort.conf -A full -l . -r mx-1.pcap` What is the number of the generated alerts?
+
+- Running `sudo snort -c /etc/snort/snort.conf -A full -l . -r mx-1.pcap`, we can see how many alerts Snort generated under `Action Stats:`
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/09749479-9886-4e74-afb6-95a2e72aa255" />
+</p>
+
 ## Task 9
 ## Task 10
