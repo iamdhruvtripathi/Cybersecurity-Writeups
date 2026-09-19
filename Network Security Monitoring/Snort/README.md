@@ -306,7 +306,7 @@ snort -r snort.log.1640048004 tcp and port 80
 
 - We can edit `local.rules` and add our own rules here. Here, to filter out for a particular IP ID, we can simply add `id:35369`. Note that we have to be in the `TASK-9` folder
 ```
-sudo gedit /etc/snort/rules/local.rules 
+sudo gedit local.rules 
 ```
 ```
 alert icmp any any <> any any (msg: "Packet ID 35369 detected"; id:35369; sid:1000001; rev:1;)
