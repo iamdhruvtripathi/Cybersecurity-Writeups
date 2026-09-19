@@ -367,6 +367,9 @@ alert tcp any any <> any any (msg: "PUSH-ACK flag test"; flags:PA; sid: 1000001;
 ### Clear the previous alert file and comment out the old rules. Create a rule to filter UDP packets with the same source and destination IP and run it against the given pcap file. What is the number of packets that show the same source and destination address?
 
 - This one was a bit tricky but the idea is to use `sameip` here where we filter the source and destination IP addresses for duplication
+```
+alert udp any any <> any any (msg: "Same source/destination IP"; sameip; sid: 1000001; rev:1;)
+```
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/488b082c-d4d1-4410-b64e-d0c45adf0797" />
