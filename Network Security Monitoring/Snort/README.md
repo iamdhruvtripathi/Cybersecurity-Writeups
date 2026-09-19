@@ -300,6 +300,25 @@ snort -r snort.log.1640048004 tcp and port 80
 
 - Answer: `1020`
 
-
 ## Task 9
+
+### Use "task9.pcap". Write a rule to filter IP ID "35369" and run it against the given pcap file. What is the request name of the detected packet? You may use this command: "snort -c local.rules -A full -l . -r task9.pcap"
+
+- We can edit `local.rules` and add out own rules here. Here, to filter out for a particular IP ID, we can simply add `id:35369`. Note that we have to be in the `TASK-9` folder
+```
+sudo gedit /etc/snort/rules/local.rules 
+```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e0a7adcb-d167-43dd-ab45-95354be7755f" />
+</p>
+
+- We see that our Snort log file is generated and can read it via `sudo snort -r [file name here]. At the top, we see only one packet and the request name
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1cef021b-b37a-49c4-8382-aef1cf76413e" />
+</p>
+
+- Answer: `TIMESTAMP REQUEST`
+
 ## Task 10
