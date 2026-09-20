@@ -387,6 +387,10 @@ alert udp any any <> any any (msg: "Same source/destination IP"; sameip; sid: 10
 
 - Answer: `7`
 
+### Case Example - An analyst modified an existing rule successfully. Which rule option must the analyst change after the implementation?
+
+- Answer: `rev`
+
 ## Task 10
 
 ### Read the task above.
