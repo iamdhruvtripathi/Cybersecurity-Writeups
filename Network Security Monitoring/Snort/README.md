@@ -384,3 +384,11 @@ alert udp any any <> any any (msg: "Same source/destination IP"; sameip; sid: 10
 - Answer: `7`
 
 ## Task 10
+
+### Read the task above.
+
+- Answer: `No answer needed`
+
+## Skills Learned
+
+## Conclusion
