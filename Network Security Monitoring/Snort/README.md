@@ -399,4 +399,22 @@ alert udp any any <> any any (msg: "Same source/destination IP"; sameip; sid: 10
 
 ## Skills Learned
 
+- Understood the differences between HIDS, HIPS, NIDS, and NIPS and where each type is used
+- Learned how behavior based IPS detects anomalies by comparing network activity against an established baseline
+- Gained experience using Snort command line options to configure, test, and analyse network traffic
+- Learned how to check Snort build information and verify the number of loaded detection rules
+- Practiced generating and analysing Snort logs using ASCII output
+- Improved skills in analysing packet details including source ports, IP IDs, ACK numbers, HTTP referers, and TCP ports
+- Learned how to use Berkeley Packet Filters to isolate specific network traffic such as TCP port 80
+- Practiced analysing live generated traffic and recorded PCAP files using Snort
+- Learned how to interpret Snort alert statistics, protocol breakdowns, TCP segments, and extracted HTTP response headers
+- Practiced comparing Snort configurations and analysing how different rule sets affect generated alerts
+- Learned how to analyse multiple PCAP files using Snort's pcap list functionality
+- Gained practical experience writing custom Snort rules using local.rules
+- Practiced creating rules to detect specific IP IDs, TCP SYN flags, TCP PUSH ACK flags, and UDP packets with matching source and destination IP addresses
+- Learned how Snort rule options such as id, flags, sameip, sid, and rev can be used to customise detection logic
+- Understood the importance of updating the rev value when modifying an existing Snort rule
+- Improved skills in validating custom detection rules by reviewing Snort alerts and packet logs
+
 ## Conclusion
+This room provided hands on experience with Snort from basic IDS and IPS concepts through practical network traffic analysis. I learned how to configure and test Snort, analyse live and recorded traffic, investigate alerts and protocol statistics, use BPF filters, and create custom detection rules for specific packet characteristics. The room also covered important rule options such as IP IDs, TCP flags, sameip, sid, and rev, giving me a practical foundation for using Snort to detect and investigate suspicious network activity
