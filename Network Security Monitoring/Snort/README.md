@@ -232,6 +232,10 @@ snort -r snort.log.1640048004 tcp and port 80
 
 - Answer: `2`
 
+### You can practice the rest of the parameters by using the traffic-generator script.
+
+- Answer: `No answer needed`
+
 ## Task 8
 
 ### Investigate the mx-1.pcap file with the default configuration file. `sudo snort -c /etc/snort/snort.conf -A full -l . -r mx-1.pcap` What is the number of the generated alerts?
