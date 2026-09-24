@@ -134,3 +134,22 @@ http && http.response.code == 302
 - Below, the structure to create a firewall rule is `IF field-name CONTAINS value THEN action`
 
 - Answer: `IF User-Agent CONTAINS "BotTHM" THEN block`
+
+## Skills Learned
+
+- Identifying client-side and server-side web attacks
+- Understanding how XSS and SQL injection attacks work
+- Analyzing web server access logs to identify suspicious activity
+- Identifying attacker tools through User-Agent strings
+- Detecting directory fuzzing and brute-force attacks
+- Using Wireshark to analyze HTTP traffic and identify successful attacks
+- Filtering HTTP traffic using response codes such as 302
+- Following HTTP streams to inspect requests and responses
+- Decoding and identifying SQL injection payloads
+- Understanding how WAFs inspect and filter web requests
+- Creating custom WAF firewall rules based on request attributes
+- Understanding how threat intelligence and known indicators can help detect malicious traffic
+
+## Conclusion
+
+This room helped me understand how web attacks can be detected by analyzing logs and network traffic. I learned how to identify common attacks such as XSS, SQL injection, directory fuzzing, and brute-force attacks by examining details such as User-Agent strings, HTTP status codes, and request data. I also learned how tools like Wireshark can be used to investigate suspicious traffic and how WAFs can help protect web applications by filtering requests and applying custom firewall rules
