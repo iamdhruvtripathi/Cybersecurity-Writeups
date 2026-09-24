@@ -40,3 +40,16 @@ Explore web attacks and detection methods through log and network traffic analys
 </p>
 
 - Answer: `XSS`
+
+## Task 3
+### What class of attacks relies on exploiting vulnerabilities within web servers?
+
+- Server-side attacks are those that exploit weaknesses within a web server, application's code, or the backend that supports the website/web app. These exploit flaws in server logic, misconfigurations, input handling, etc.
+
+- Answer: `Server-Side`
+
+### Which server-side attack lets attackers abuse forms to dump database contents?
+
+- SQL injection attacks targets the database that sits behind a website and occurs when applications build queries via string concatenation instead of using parameterized queries
+
+- Answer: `SQLi`
