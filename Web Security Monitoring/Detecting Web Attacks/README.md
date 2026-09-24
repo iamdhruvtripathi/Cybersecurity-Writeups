@@ -94,7 +94,7 @@ Explore web attacks and detection methods through log and network traffic analys
 
 ### What password does the attacker successfully identify in the brute-force attack?
 
-- We know from the last task that when the HTTP status code `302` was returned, the attacker had gotten the password successfully and logged in because it most likely redirected to the user's dashboard. Knowing that we can directly search for the status code `302` and see the password. Note that I right clicked on the packet and followed the `HTTP Stream`
+- We know from the last task that when the HTTP status code `302` was returned, the attacker had gotten the password successfully and logged in because they were most likely redirected to the user's dashboard. Knowing that we can directly search for the status code `302` and see the password. Note that I right clicked on the packet and followed the `HTTP Stream`
 
 ```
 http && http.response.code == 302
