@@ -1,4 +1,4 @@
-<p align="center">
+<img width="1512" height="673" alt="image" src="https://github.com/user-attachments/assets/d4b73562-f926-4f0b-99dc-91ec790b4419" /><p align="center">
   <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="150" alt="TryHackMe Logo">
 </p>
 
@@ -53,3 +53,39 @@ Explore web attacks and detection methods through log and network traffic analys
 - SQL injection attacks targets the database that sits behind a website and occurs when applications build queries via string concatenation instead of using parameterized queries
 
 - Answer: `SQLi`
+
+## Task 4
+
+### What is the attacker's User-Agent while performing the directory fuzz?
+
+- Accessing `access.log`, we can see in the first couple of lines there is a tool called `FFUF` which is a web fuzzing tool written in Go used to discover hidden files, directories, parameters, and virtual hosts on web servers and this is the `User-agent`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/37380614-cf9b-4155-9f77-de5916f85db3" />
+</p>
+
+- Answer: `FFUF v2.1.0`
+
+### What is the name of the page on which the attacker performs a brute-force attack?
+
+- We can see here the attacker is brute forcing `/login.php` via Hydra which performs rapid, automated dictionary and brute-force attacks against network login pages and services in a live setting
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/ddf7bfd1-8319-4724-8859-c6e2291090bc" />
+</p>
+
+- Answer: `/login.php`
+
+### What is the complete, decoded (opens in new tab) SQLi payload the attacker uses on the /changeusername.php form?
+
+- After logging in, the attacker now attempts to do an SQL injection presumably in the change username form. We can copy and paste this into Cyberchef as directed
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/d65bbe62-0a75-448b-acfc-dccdaa8663f4" />
+</p>
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/cc609983-5151-483b-9671-dcd273129664" />
+</p>
+
+- Answer: `%' OR '1'='1`
