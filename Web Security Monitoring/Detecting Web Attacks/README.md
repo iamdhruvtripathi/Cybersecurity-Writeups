@@ -89,3 +89,35 @@ Explore web attacks and detection methods through log and network traffic analys
 </p>
 
 - Answer: `%' OR '1'='1`
+
+## Task 5
+
+### What password does the attacker successfully identify in the brute-force attack?
+
+- We know from the last task that when the HTTP status code `302` was returned, the attacker had gotten the password successfully and logged in because it most likely redirected to the user's dashboard. Knowing that we can directly search for the status code `302` and see the password. Note that I right clicked on the packet and followed the `HTTP Stream`
+
+```
+http && http.response.code == 302
+```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/57f49497-04a9-47ca-bfaf-453fcdcb5c61" />
+</p>
+
+- Answer: `astrongpassword123`
+
+### What is the flag the attacker found in the database using SQLi?
+
+- For ease, I added the `User-agent` as a column and we can see where the attacker tries an SQL injection
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/390e1140-c42b-4d69-a5c0-107806fd7bf8" />
+</p>
+
+- I right clicked on the packet and followed the `HTTP Stream` and we can see the flag present
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f0acd27c-4db7-4aac-b40f-87e2d771d334" />
+</p>
+
+- Answer: `THM{dumped_the_db}`
