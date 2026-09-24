@@ -121,3 +121,16 @@ http && http.response.code == 302
 </p>
 
 - Answer: `THM{dumped_the_db}`
+
+## Task 6
+### What do WAFs inspect and filter?
+
+- WAFs inspect and decide whether to allow a web request or block it entirely based on predefined rules
+
+- Answer: `Web Request`
+
+### Create a custom firewall rule to block any `User-Agent` that matches `"BotTHM"`
+
+- Below, the structure to create a firewall rule is `IF field-name CONTAINS value THEN action`
+
+- Answer: `IF User-Agent CONTAINS "BotTHM" THEN block`
