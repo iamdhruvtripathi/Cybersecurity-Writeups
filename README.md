@@ -57,7 +57,9 @@ This repository contains all my public TryHackMe write-ups, including walkthroug
     - [Man-in-the-Middle Detection](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Network%20Security%20Monitoring/Man-in-the-Middle%20Detection/README.md)
     - [Snort](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Network%20Security%20Monitoring/Snort/README.md)
   - [Web Security Monitoring](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/tree/main/Web%20Security%20Monitoring)
-    - [Detecting Web Attacks](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/tree/main/Web%20Security%20Monitoring/Detecting%20Web%20Attacks)  
+    - [Detecting Web Attacks](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/tree/main/Web%20Security%20Monitoring/Detecting%20Web%20Attacks)
+    - [Detecting Web Shells](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Web%20Security%20Monitoring/Detecting%20Web%20Shells/README.md) 🚧 IN PROGRESS 🚧
+
 
 ### SOC Simulator
   - [Introduction To Phishing (SOC Simulator 🌐)](https://github.com/iamdhruvtripathi/TryHackMe-Room-Writeups/blob/main/SOC%20Simulator/Introduction%20to%20Phishing/README.md)
