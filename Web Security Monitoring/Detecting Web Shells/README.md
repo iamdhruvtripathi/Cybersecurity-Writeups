@@ -51,7 +51,7 @@ Explore web shell detection by analyzing logs, file systems, and network traffic
 - Answer: `.aspx`
 
 ## Task 3
-- Access the shell and determine which account you have access to by running the `whoami` command.
+### Access the shell and determine which account you have access to by running the `whoami` command.
 
 - We can access the web shell via browser
 
