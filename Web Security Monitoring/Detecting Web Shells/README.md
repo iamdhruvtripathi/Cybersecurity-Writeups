@@ -84,3 +84,20 @@ Explore web shell detection by analyzing logs, file systems, and network traffic
 </p>
 
 - Answer: `THM{W3b_Sh3ll_Usag3}`
+
+## Task 4
+### What is the part of the URL that associates values to parameters and can be a valuable indicator of web shell activity?
+
+- Query strings can be suspicious as information such as commands can be added to the end of the URL and or it can also be encoded
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f7a69765-2635-42f4-a5b7-0b887af7011a" />
+</p>
+
+- Answer: `query strings`
+
+### What auditd syscall would confirm that a file was written to disk following a suspicious POST request to `/upload.php`?
+
+- An example such as `creat /uploads/webshell.php user=www-data` can tell us that the web server actually created the file
+
+- Answer: `creat`
