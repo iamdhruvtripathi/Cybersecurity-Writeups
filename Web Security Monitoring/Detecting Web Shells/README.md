@@ -184,3 +184,24 @@ Explore web shell detection by analyzing logs, file systems, and network traffic
 </p>
 
 - Answer: `THM{W3b_Sh3ll_Int3rnals}`
+Got it — those should be described as concepts learned rather than hands-on skills
+
+ ## Skills Learned
+
+- Recognized common web shell file extensions such as `.aspx` and `.php`
+- Used commands such as `whoami`, `ls`, and `cat` to investigate a web shell
+- Analyzed Apache access logs to identify suspicious activity and attacker IP addresses
+- Used HTTP status codes to identify successful directory discovery
+- Used `grep` to filter logs for suspicious HTTP requests and commands
+- Identified suspicious `POST` requests used to upload web shells
+- Used `find` to locate potentially malicious PHP files within web directories
+- Learned how auditd syscalls such as `creat` can help confirm files being written to disk
+- Learned how Wireshark filters such as `http.request.method == "PUT"` can be used to identify suspicious HTTP requests
+- Traced attacker activity from initial reconnaissance through web shell deployment
+- Identified commands executed through a compromised web shell
+- Identified the use of `linpeas.sh` after web shell access was established
+- Inspected web shell source code to locate hidden information and flags
+
+## Conclusion
+
+- This room provided practical experience with detecting and investigating web shells using web server logs, file system analysis, and command line tools. I learned how attackers can discover accessible directories, upload a web shell, execute commands, and download additional tools after gaining access to a server. The room also introduced how auditd and Wireshark can be used to support web shell investigations by identifying file creation activity and suspicious HTTP requests, although these were mainly covered through theory in this room. Overall, I gained a better understanding of how to trace web shell activity and identify signs of compromise from both logs and the file system
