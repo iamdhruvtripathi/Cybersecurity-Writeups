@@ -199,7 +199,6 @@ Got it — those should be described as concepts learned rather than hands-on sk
 - Learned how Wireshark filters such as `http.request.method == "PUT"` can be used to identify suspicious HTTP requests
 - Traced attacker activity from initial reconnaissance through web shell deployment
 - Identified commands executed through a compromised web shell
-- Identified the use of `linpeas.sh` after web shell access was established
 - Inspected web shell source code to locate hidden information and flags
 
 ## Conclusion
