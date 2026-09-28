@@ -22,3 +22,16 @@ Explore denial-of-service attacks, detection techniques, and strategies for prot
 ### I understand the learning objectives and am ready to embark on a Denial-of-Service adventure!
 
 - Answer: `No answer needed`
+
+## Task 2
+### What class of attack relies on disrupting the availability of a web service?
+
+- Denial-of-service attacks overwhelm a website/app so that people can not use them. For example, an attacker may send a large number of requests to a website until the server becomes overloaded and stops responding normally
+
+- Answer: `Denial-of-Service`
+
+### What do we call the network of compromised machines that attackers use to launch DDoS attacks?
+
+- Botnets are an army of compromised computers such as IoT devices, computers, servers infected with malware
+
+- Answer: `Botnet`
