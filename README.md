@@ -58,7 +58,7 @@ This repository contains all my public TryHackMe write-ups, including walkthroug
     - [Snort](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Network%20Security%20Monitoring/Snort/README.md)
   - [Web Security Monitoring](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/tree/main/Web%20Security%20Monitoring)
     - [Detecting Web Attacks](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/tree/main/Web%20Security%20Monitoring/Detecting%20Web%20Attacks)
-    - [Detecting Web Shells](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Web%20Security%20Monitoring/Detecting%20Web%20Shells/README.md) 🚧 IN PROGRESS 🚧
+    - [Detecting Web Shells](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Web%20Security%20Monitoring/Detecting%20Web%20Shells/README.md)
 
 
 ### SOC Simulator
