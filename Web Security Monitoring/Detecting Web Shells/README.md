@@ -101,3 +101,86 @@ Explore web shell detection by analyzing logs, file systems, and network traffic
 - An example such as `creat /uploads/webshell.php user=www-data` can tell us that the web server actually created the file
 
 - Answer: `creat`
+
+### What command would you use to locate `.php` files in the `/var/www/` directory?
+
+- Using the command below, we are looking inside `/var/www/` and all its subfolders, and looking at every file that ends in `.php.`. Note that `/var/www/` is a common place for web application files, so it can contain a web shell if a server has been compromised
+
+- Answer: `find /var/www/ -type f -name "*.php"`
+
+### Which Wireshark filter would you use to search specifically for `PUT` requests?
+
+- The below command can be used to upload a web shell
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/a20bebd3-75b0-4a34-b536-295ca09085bf" />
+</p>
+
+- Answer: `http.request.method == "PUT"`
+
+## Task 6
+### Which IP address likely belongs to the attacker?
+
+- I first navigated to `/var/log/apache2` and used `cat access.log | grep 404` to look for files or directories the attacker was trying to access that did not exist. The repeated requests may show that the attacker was searching for a place to upload or run a web shell. We can see dozens of repeated `GET` requests with `404` status codes. On the left, we can also see the IP address associated with the requests
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8e9e1be2-e40d-46e9-a3f9-56209812a27f" />
+</p>
+
+- Answer: `203.0.113.66`
+
+### What is the first directory that the attacker successfully identifies?
+
+- Knowing that the attacker is searching for pages/directories that exist, we know it must return a `200` HTTP status response code and we can see it returned `200` for one particular page
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e511ad54-93e1-4050-a458-def090b8979a" />
+</p>
+
+- Answer: `/wordpress`
+
+###  What is the name of the `.php` file the attacker uses to upload the web shell?
+
+- The attacker uses a `POST` request to upload the web shell. Knowing this, we can search for `POST` requests specifically via `grep POST`. We can see the attacker uploaded `shadyshell.php` and the specific page it was uploaded on
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/3a894f88-f7ed-4759-aae8-e996b80c9b32" />
+</p>
+
+- Answer: `upload_form.php`
+
+### What is the first command run by the attacker using the newly uploaded web shell?
+
+- Often times keywords such as `cmd` may be included in `GET` requests and so we can use `grep cmd` to filter the output. We can see the first command on the top
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/12ac9199-5926-4818-9352-bacf426a8ab0" />
+</p>
+
+- Answer: `whoami`
+
+### After gaining access via the web shell, the attacker uses a command to download a second file onto the server. What is the name of this file?
+
+- We can see the bottom most command where the attacker downloads a secondary file from their remote server onto the victim machine
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/9b12216b-a8b7-4627-b57b-8b06cab899f4" />
+</p>
+
+- Answer: `linpeas.sh`
+
+### The attacker has hidden a secret within the web shell. Use `cat` to investigate the web shell code and find the flag.
+
+- We know the web shell was uploaded in `wordpress/wp-content/uploads`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e51d79e9-7b71-446b-8fa5-9f6f1148419d" />
+</p>
+
+- Since we know where the web shell is, we can just navigate to that directory and look inside the web shell to find the hidden flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/3deb15a7-2ffd-4867-8de9-42a3678be739" />
+</p>
+
+- Answer: `THM{W3b_Sh3ll_Int3rnals}`
