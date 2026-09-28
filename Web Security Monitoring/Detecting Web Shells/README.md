@@ -196,8 +196,8 @@ Got it — those should be described as concepts learned rather than hands-on sk
 - Identified suspicious `POST` requests used to upload web shells
 - Used `find` to locate potentially malicious PHP files within web directories
 - Learned how auditd syscalls such as `creat` can help confirm files being written to disk
-- Learned how Wireshark filters such as `http.request.method == "PUT"` can be used to identify suspicious HTTP requests
-- Traced attacker activity from initial reconnaissance through web shell deployment
+- Learned how Wireshark filters can be used to identify suspicious HTTP methods such as `PUT`
+- Traced attacker activity from initial reconnaissance to web shell deployment and command execution
 - Identified commands executed through a compromised web shell
 - Inspected web shell source code to locate hidden information and flags
 
