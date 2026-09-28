@@ -2,7 +2,7 @@
   <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="150" alt="TryHackMe Logo">
 </p>
 
-# Detecting Web Shells
+# Detecting Web DDoS
 |  Room Name | Detecting Web DDoS |
 |----------|-------|
 | Author | Dhruv Tripathi |
