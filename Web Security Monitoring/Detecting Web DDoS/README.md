@@ -32,6 +32,6 @@ Explore denial-of-service attacks, detection techniques, and strategies for prot
 
 ### What do we call the network of compromised machines that attackers use to launch DDoS attacks?
 
-- Botnets are an army of compromised computers such as IoT devices, computers, servers infected with malware
+- Botnets are an army of compromised computers such as IoT devices, computers, servers infected with malware controlled by an attacker and often utilized in DDoS attacks
 
 - Answer: `Botnet`
