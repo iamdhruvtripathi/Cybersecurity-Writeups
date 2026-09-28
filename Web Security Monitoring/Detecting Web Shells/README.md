@@ -102,6 +102,7 @@ Explore web shell detection by analyzing logs, file systems, and network traffic
 
 - Answer: `creat`
 
+## Task 5
 ### What command would you use to locate `.php` files in the `/var/www/` directory?
 
 - Using the command below, we are looking inside `/var/www/` and all its subfolders, and looking at every file that ends in `.php.`. Note that `/var/www/` is a common place for web application files, so it can contain a web shell if a server has been compromised
