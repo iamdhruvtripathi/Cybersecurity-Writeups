@@ -185,9 +185,8 @@ Explore web shell detection by analyzing logs, file systems, and network traffic
 </p>
 
 - Answer: `THM{W3b_Sh3ll_Int3rnals}`
-Got it — those should be described as concepts learned rather than hands-on skills
 
- ## Skills Learned
+## Skills Learned
 
 - Recognized common web shell file extensions such as `.aspx` and `.php`
 - Used commands such as `whoami`, `ls`, and `cat` to investigate a web shell
