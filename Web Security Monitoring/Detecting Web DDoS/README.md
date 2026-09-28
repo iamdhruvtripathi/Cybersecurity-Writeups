@@ -35,3 +35,25 @@ Explore denial-of-service attacks, detection techniques, and strategies for prot
 - Botnets are an army of compromised computers such as IoT devices, computers, servers infected with malware controlled by an attacker and often utilized in DDoS attacks
 
 - Answer: `Botnet`
+
+## Task 3
+
+### Which attacker motive aims to make customers lose confidence in a company?
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e8843aae-81fd-40ba-b0ed-92b594a14049" />
+</p>
+
+- Reputational damage can cause customers to lose trust in a company
+
+- Answer: `Reputational Damage`
+
+### Which motive most likely drove the 2023 DDoS attack against Microsoft?
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/701e91bd-b24a-475e-8595-1c12b8ebb302" />
+</p>
+
+- We know it was a hacktivist group
+
+- Answer: `Hacktivism`
