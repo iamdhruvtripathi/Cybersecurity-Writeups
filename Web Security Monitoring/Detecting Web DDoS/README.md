@@ -57,3 +57,34 @@ Explore denial-of-service attacks, detection techniques, and strategies for prot
 - We know it was a hacktivist group
 
 - Answer: `Hacktivism`
+
+## Task 4
+### What is the attacker’s IP address?
+
+- Opening `access.log`, we can see that the attacker is rapidly sending numerous HTTP `GET /login` requests utilizing curl to automate the attack and we can see the IP address associated with those requests
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/4d6e109a-3cf8-4c2b-8891-4db07ddf9359" />
+</p>
+
+- Answer: `203.12.23.195`
+
+### Which page is repeatedly targeted by the attacker’s requests?
+
+- The page being targeted is listed after `GET`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/289968a8-698d-4fb4-a60c-2eecc2056f88" />
+</p>
+
+- Answer: `/login`
+
+### After the attack, what error code do legitimate users receive?
+
+- We can see here after the attacker executes the attack, the website/server returns a `503` error, meaning it has become unavailable
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f3d7dd45-c751-4c18-86a4-bd9446ad83d2" />
+</p>
+
+- Answer: `503`
