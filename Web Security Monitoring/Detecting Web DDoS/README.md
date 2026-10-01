@@ -1,4 +1,4 @@
-<p align="center">
+<img width="1512" height="802" alt="image" src="https://github.com/user-attachments/assets/4d3d51c2-736a-41a9-a38f-fdcef662313e" /><p align="center">
   <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="150" alt="TryHackMe Logo">
 </p>
 
@@ -88,3 +88,72 @@ Explore denial-of-service attacks, detection techniques, and strategies for prot
 </p>
 
 - Answer: `503`
+
+## Task 5
+### What was the most frequently requested `uri`?
+
+- We can type `index=main` to pull up all the logs. Then, under `Interesting Fields`, I noticed the `uri` field. We can click on it to see the most frequently requested URIs
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8195c166-97d5-4925-bc43-4e692f70ea85" />
+</p>
+
+- Answer: `/search`
+
+### Which `clientip` made the most requests to the target `uri`?
+
+- We can search in the logs for `/search` since that was the most frequently requested URI
+
+```
+index=main uri="/search"
+```
+
+- Clicking on `clientip`, we can see the IP that made the most requests
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/167cb1ab-4b33-436e-bb1f-8cd2e5d4c4b7" />
+</p>
+
+- Answer: `203.0.113.7`
+
+### How many IP addresses were part of the botnet that attacked your website?
+
+- Since we know our website was under a DDoS attack, we expect to see lots of different IP addresses sending requests. We can look at the IP addresses that made requests to `/search` and see how many there were next to `clientip`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/b8d115d8-e5d9-40bc-8765-bf8f3179513a" />
+</p>
+
+- Answer: `60`
+
+### Which `useragent` was most commonly used by the attacking traffic?
+
+- Clicking on the `useragent` field, we can see the top `useragent` used
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/9616fe3f-54b3-44c3-98e3-2f2218b6b00a" />
+</p>
+
+- Answer: `Java/1.8.0_181`
+
+### Use the `timechart` command to visualize the requests. What is the peak number of requests made per second during the attack?
+
+- We can use `index="main" | timechart span=1s count` to see the peak number of requests made per second. The `timechart` groups the results into one second intervals, while `count` counts the number of requests in each interval, making it easy to identify the highest request rate
+  
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/4f23faf1-03dd-4919-8463-cc19c677a356" />
+</p>
+
+- Answer: `207`
+
+### Which legitimate (non-attacking) `clientip` received the first `503` response status post-attack?
+
+- Here, we can filter down the results by searching for the status code `503`, the `clientup` is anything that doesn't start with `203` so it was the `10.10.10.0/24` subnet. Lastly, we can sort by `_time` and put it all into a table
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/5ad11414-7b93-4ea3-b266-bf5d14190257" />
+</p>
+
+- Answer: `10.10.0.27`
+
+## Task 6
