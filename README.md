@@ -59,7 +59,7 @@ This repository contains all my public TryHackMe write-ups, including walkthroug
   - [Web Security Monitoring](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/tree/main/Web%20Security%20Monitoring)
     - [Detecting Web Attacks](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/tree/main/Web%20Security%20Monitoring/Detecting%20Web%20Attacks)
     - [Detecting Web Shells](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Web%20Security%20Monitoring/Detecting%20Web%20Shells/README.md)
-    - [Detecting Web DDoS](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Web%20Security%20Monitoring/Detecting%20Web%20DDoS/README.md) 🚧 IN PROGRESS 🚧
+    - [Detecting Web DDoS](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Web%20Security%20Monitoring/Detecting%20Web%20DDoS/README.md)
 
 ### SOC Simulator
   - [Introduction To Phishing (SOC Simulator 🌐)](https://github.com/iamdhruvtripathi/TryHackMe-Room-Writeups/blob/main/SOC%20Simulator/Introduction%20to%20Phishing/README.md)
