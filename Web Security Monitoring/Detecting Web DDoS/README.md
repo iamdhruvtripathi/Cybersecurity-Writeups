@@ -174,7 +174,7 @@ Here’s a version that fits the style of your write-up, with the skills startin
 
 ## Skills Learned
 
-- Identified different types of DoS and DDoS attacks and their impact on service availability
+- Identified denial-of-service attacks as attacks that disrupt web service availability
 - Analyzed attacker motivations such as hacktivism and reputational damage
 - Examined web server logs to identify suspicious IP addresses and targeted endpoints
 - Investigated repeated requests to determine potential attacking traffic
