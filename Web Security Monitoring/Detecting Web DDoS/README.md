@@ -157,3 +157,15 @@ index=main uri="/search"
 - Answer: `10.10.0.27`
 
 ## Task 6
+
+### What type of security challenge blocks bots by asking users to solve a simple puzzle?
+
+- Websites can use challenges (CAPTCHA) to stop automated traffic
+
+- Answer: `CAPTCHA`
+
+### Which CDN feature spreads traffic across multiple servers to prevent overload?
+
+- CDN's can provide load-balancing to make sure traffic is distributed across different servers making sure no single server is overloaded
+
+- Answer: `Load-balancing`
