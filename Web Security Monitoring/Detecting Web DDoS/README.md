@@ -169,3 +169,24 @@ index=main uri="/search"
 - CDN's can provide load-balancing to make sure traffic is distributed across different servers making sure no single server is overloaded
 
 - Answer: `Load-balancing`
+
+Here’s a version that fits the style of your write-up, with the skills starting with different action verbs and no periods in the skills section
+
+## Skills Learned
+
+- Identified different types of DoS and DDoS attacks and their impact on service availability
+- Analyzed attacker motivations such as hacktivism and reputational damage
+- Examined web server logs to identify suspicious IP addresses and targeted endpoints
+- Investigated repeated requests to determine potential attacking traffic
+- Queried Splunk logs using fields such as `uri`, `clientip`, and `useragent`
+- Utilized `timechart` to visualize request patterns and identify traffic spikes
+- Distinguished legitimate users from attacking traffic based on IP addresses and response codes
+- Recognized botnet activity by analyzing requests from multiple IP addresses
+- Identified common user agents associated with attacking traffic
+- Understood how CAPTCHA challenges can help block automated traffic
+- Explained how CDN load balancing distributes traffic across multiple servers
+- Applied log analysis techniques to investigate the effects of a DDoS attack
+
+ ## Conclusion
+
+This room demonstrated how DDoS attacks can affect the availability of web applications and how security teams can detect them through log analysis. By examining IP addresses, requested URIs, user agents, request rates, and HTTP status codes, I learned how to identify patterns associated with malicious traffic and distinguish them from legitimate users. I also learned how defenses such as CAPTCHA challenges and CDN load balancing can help reduce the impact of automated and high-volume traffic
