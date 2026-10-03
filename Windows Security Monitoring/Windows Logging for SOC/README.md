@@ -22,3 +22,5 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 ### I'm ready to move on!
 
 - Answer: `No answer needed`
+
+## Task 2
