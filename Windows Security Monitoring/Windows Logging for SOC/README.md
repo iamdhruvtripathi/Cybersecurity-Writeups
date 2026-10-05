@@ -36,3 +36,7 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 - We know that the login information is stored in the `Security` folder
 
 - Answer: `Security / 4624`
+
+## Task 3
+
+- 
