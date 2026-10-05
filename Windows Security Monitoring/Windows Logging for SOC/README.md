@@ -63,7 +63,7 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f1c91f3e-cb9f-439e-85c6-2c0f7f920214" />
 </p>
 
-- Here, we look for `Logon Type 10`, which usually means the user logged in through RDP. This can show that the attacker successfully logged into the system using the compromised account
+- Here, we look for `Logon Type 10`, which usually means the user logged in through RDP. This can show that the attacker successfully logged into the system using the compromised account. Note that by correlation of the timeline, we saw a burst of failed authentication attempts (Event ID `4625`) originating from the malicious IP address `10.10.53.248` from the last question. We know that a couple of seconds later, the attacker got a successful connection (Event ID `4624`) occurs using `Logon Type 10` (Remote Desktop Protocol). Looking at the New Logon details for this specific successful event, the targeted account name is identified
 
 ### What was the Logon ID of the malicious RDP login? Note: The login you are looking for has a Logon Type 10.
 
