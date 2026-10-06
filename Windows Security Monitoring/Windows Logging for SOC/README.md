@@ -92,7 +92,7 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 
 - Answer: `svc_sysrestore`
 
-#### Which two privileged groups was the backdoor user added to? (Answer in alphabetical order, e.g. "Administrators, Power Users")
+### Which two privileged groups was the backdoor user added to? (Answer in alphabetical order, e.g. "Administrators, Power Users")
 
 - To search for this, we can filter for Event ID `4732`, which records when a user is added to a security group. Attackers may use this to add an account to a privileged group, such as Administrators, to gain administrator privileges
 
