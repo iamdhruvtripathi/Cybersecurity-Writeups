@@ -74,3 +74,40 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 </p>
 
 - Answer: `0x183C36D`
+
+## Task 4
+### Continue with the "Practice-Security.evtx" file on the VM's Desktop. Which user was created by the attacker soon after the RDP login?
+
+- We know to search for Event ID `4624` and look for `Logon Type 10`, which indicates an RDP/Remote Interactive logon. I noted the Logon ID as `0x183C36D`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/290634f3-0e47-4287-b55f-ed718802d400" />
+</p>
+
+- Now, to search for a newly created user account, we can filter for Event ID `4720`. Even though there is only one event here, we can see that the Logon ID matches the previous `4624` event, allowing us to correlate the two events. We can also see the name of the newly created account. Note the timing as well where the account was created a couple of minutes after the login
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/341bf562-1ccd-42ea-82c9-b4efd4d62b00"/> 
+</p>
+
+- Answer: `svc_sysrestore`
+
+#### Which two privileged groups was the backdoor user added to? (Answer in alphabetical order, e.g. "Administrators, Power Users")
+
+- To search for this, we can filter for Event ID `4732`, which records when a user is added to a security group. Attackers may use this to add an account to a privileged group, such as Administrators, to gain administrator privileges
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/05b38faa-bd4d-4ca5-baa2-4c0c90030724" />
+</p>
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f9399e61-893a-4ec7-a658-de86c2e3b4b8" />
+</p>
+
+- Answer: `Backup Operators, Remote Desktop Users`
+
+### Does the Logon ID field match what you saw in the previous task (Yea/Nay)?
+
+- Yes, the Logon ID does match because we found the Logon ID to be `0x183C36D` in both cases where we filtered for Event ID `4624` and Event ID `4720` or `4732`
+
+- Answer: `Yea`
