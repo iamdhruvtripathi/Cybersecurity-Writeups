@@ -111,3 +111,5 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 - Yes, the Logon ID does match because we found the Logon ID to be `0x183C36D` in both cases where we filtered for Event ID `4624` and Event ID `4720` or `4732`
 
 - Answer: `Yea`
+
+## Task 5
