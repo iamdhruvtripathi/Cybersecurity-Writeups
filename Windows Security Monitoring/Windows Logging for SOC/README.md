@@ -126,7 +126,7 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 
 ### Which file did Sarah download from the browser?
 
-- Looking at the events, we see one log where Sarah downloaded something and it was in here `Downloads` folder
+- Looking at the events, we see one log where Sarah downloaded something and it was here in the `Downloads` folder
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/338b5a50-11ba-4b53-874b-c41042896bf7" />
