@@ -138,4 +138,8 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 
 - TryHackMe gave me this [page](https://isc.sans.edu/diary/Sysmon+and+Alternate+Data+Streams/26292.) to visit. The article explained that Sysmon can capture Alternate Data Streams (ADS), including the `Zone.Identifier` stream created when a file is downloaded, which can contain the `HostUrl` and `ReferrerUrl`. `ZoneId=3` means the file came from the Internet. To find the answer, we searched the Sysmon logs for Event ID `15` (`FileCreateStreamHash`), which records information about file streams. We then checked the `Zone.Identifier` information and found the `HostUrl`, which showed where the file was downloaded from and gave us the answer
 
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7e766520-a1ca-4d36-ac05-6f18159ec2b0" />
+</p>
+
 - Answer: `http://gettsveriff.com/bgj3/ckjg.exe`
