@@ -113,3 +113,29 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 - Answer: `Yea`
 
 ## Task 5
+
+### Open the "Practice-Sysmon.evtx" file on the VM's Desktop. Which web browser does Sarah use to browse the web?
+
+- To search Sysmon for which web browser she was using, there needs to be a web browser process logged. To look for processes, we can filter for Sysmon Event ID `1`, which records process creation events. Sure enough, when we filter for Event ID `1`, we find the web browser process she used
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/d57ffe36-2979-482c-86e0-0ac2e7b0ad39" />
+</p>
+
+- Answer: `Google Chrome`
+
+### Which file did Sarah download from the browser?
+
+- Looking at the events, we see one log where Sarah downloaded something and it was in here `Downloads` folder
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/338b5a50-11ba-4b53-874b-c41042896bf7" />
+</p>
+
+- Answer: `C:\Users\sarah.miller\Downloads\ckjg.exe`
+
+### Which URL was the file downloaded from? Note: Use other Sysmon events to find out!
+
+- TryHackMe gave me this [page](https://isc.sans.edu/diary/Sysmon+and+Alternate+Data+Streams/26292.) to visit. The article explained that Sysmon can capture Alternate Data Streams (ADS), including the `Zone.Identifier` stream created when a file is downloaded, which can contain the `HostUrl` and `ReferrerUrl`. `ZoneId=3` means the file came from the Internet. To find the answer, we searched the Sysmon logs for Event ID `15` (`FileCreateStreamHash`), which records information about file streams. We then checked the `Zone.Identifier` information and found the `HostUrl`, which showed where the file was downloaded from and gave us the answer
+
+- Answer: `http://gettsveriff.com/bgj3/ckjg.exe`
