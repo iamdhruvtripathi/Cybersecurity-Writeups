@@ -159,7 +159,7 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 
 ### What is the Command & Control server malware connected to? (Answer in format IP:Port, e.g. 1.1.1.1:80)
 
-- To find the IP address and port the malware connected to, we can filter for Sysmon Event ID `3`, which records network connections made by processes. We can then check the DestinationIp and DestinationPort fields to identify the Command & Control (C2) server
+- To find the IP address and port the malware connected to, we can filter for Sysmon Event ID `3`, which records network connections made by processes. We can then check the `DestinationIp` and `DestinationPort` fields to identify the Command & Control (C2) server
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/74581fb9-6b00-401e-9ef3-6e13dbae8835" />
