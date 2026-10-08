@@ -144,6 +144,8 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 
 - Answer: `http://gettsveriff.com/bgj3/ckjg.exe`
 
+## Task 6
+
 ### Continue with the "Practice-Sysmon.evtx" file on the VM's Desktop. Which file was created by the downloaded malware to persist on the host?
 
 - To see which process created the file, we can filter Sysmon for Event ID `11`, which tracks file creation and overwriting activity. By reviewing the events, we can identify the malware process that created the `DeleteApp.url` file
