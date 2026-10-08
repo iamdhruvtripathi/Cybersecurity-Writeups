@@ -169,7 +169,7 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 
 ### Finally, which domain does the malicious IP correspond to?
 
-- To search for DNS queries, we can filter for Event ID `22`. There are technically three domains we could choose from based on the first three events, but we know it’s the first one because it resolves to the same IP address that was identified as the C2 server in the previous task
+- To search for DNS queries, we can filter for Event ID `22`. There are technically three domains we could choose from based on the first three events, but we know it’s the first one because it resolves to the same IP address that was identified as the C2 server in the previous question
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/59f0e730-9210-4579-91d8-29cec135939b" />
