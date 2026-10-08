@@ -143,3 +143,34 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 </p>
 
 - Answer: `http://gettsveriff.com/bgj3/ckjg.exe`
+
+### Continue with the "Practice-Sysmon.evtx" file on the VM's Desktop. Which file was created by the downloaded malware to persist on the host?
+
+- To see which process created the file, we can filter Sysmon for Event ID `11`, which tracks file creation and overwriting activity. By reviewing the events, we can identify the malware process that created the `DeleteApp.url` file
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/24725b66-8e89-4876-aef3-3710211561c2" />
+</p>
+
+- Answer: `C:\Users\sarah.miller\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\DeleteApp.url`
+
+
+### What is the Command & Control server malware connected to? (Answer in format IP:Port, e.g. 1.1.1.1:80)
+
+- To find the IP address and port the malware connected to, we can filter for Sysmon Event ID `3`, which records network connections made by processes. We can then check the DestinationIp and DestinationPort fields to identify the Command & Control (C2) server
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/74581fb9-6b00-401e-9ef3-6e13dbae8835" />
+</p>
+
+- Answer: `193.46.217.4:7777`
+
+### Finally, which domain does the malicious IP correspond to?
+
+- To search for DNS queries, we can filter for Event ID `22`. There are technically three domains we could choose from based on the first three events, but we know it’s the first one because it resolves to the same IP address that was identified as the C2 server in the previous task
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/59f0e730-9210-4579-91d8-29cec135939b" />
+</p>
+
+- Answer: `hkfasfsafg.click`
