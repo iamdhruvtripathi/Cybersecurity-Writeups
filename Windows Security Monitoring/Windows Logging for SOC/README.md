@@ -217,3 +217,21 @@ Get-Content "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\PowerShell
 </p>
 
 - Answer: `THM{it_was_me!}`
+
+## Skills Learned
+- Identifying successful and failed Windows logins using Event IDs 4624 and 4625
+- Filtering Windows Security logs to investigate brute-force attacks and identify compromised accounts
+- Analyzing Logon Types and Logon IDs to correlate suspicious login activity across events
+- Detecting newly created user accounts using Event ID 4720
+- Identifying privilege escalation through security group membership changes using Event ID 4732
+- Analyzing Sysmon process creation events using Event ID 1
+- Investigating downloaded files, their source URLs, and Alternate Data Streams using Event ID 15
+- Tracking file creation activity and identifying persistence mechanisms using Sysmon Event ID 11
+- Investigating suspicious network connections and identifying Command and Control servers using Sysmon Event ID 3
+- Analyzing DNS queries to identify domains associated with malicious IP addresses using Sysmon Event ID 22
+- Locating and reviewing PowerShell command history to investigate user activity and identify potentially malicious commands
+- Correlating timestamps, account names, and Logon IDs to reconstruct attack timelines
+
+## Conclusion
+
+This room taught me how to analyze Windows Security logs, Sysmon events, and PowerShell history to investigate suspicious activity. I learned to identify brute-force attacks, compromised accounts, privilege escalation, malware persistence, and Command and Control communications. These skills are essential for detecting threats and investigating security incidents in a SOC environment
