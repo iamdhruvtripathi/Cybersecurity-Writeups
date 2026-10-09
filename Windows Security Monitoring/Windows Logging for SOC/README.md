@@ -182,7 +182,7 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 ### Review the Administrator's PS history on the attached VM. Which PowerShell command was executed first?
 
 - The `ConsoleHost_history.txt` is located at `C:\Users\
-Administrator\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`. Essentially, this is a plain text file automatically created by PowerShell. It simply records every command someone types into a PowerShell window and is immediately updated when they press `Enter` to submit a command. When we see the content of this file, we cans see the first command at the top saved in this file
+Administrator\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`. Essentially, this is a plain text file automatically created by PowerShell. It simply records every command someone types into a PowerShell window and is immediately updated when they press `Enter` to submit a command. When we see the content of this file, we can see the first command at the top saved in this file
 
 ```
 Get-Content "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
