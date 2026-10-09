@@ -206,7 +206,7 @@ Get-Content "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\PowerShell
 
 ### Can you find the flag stored in the PowerShell history? (Format: THM{...}) Note: You might want to check the PS history of other local users!
 
-- We know that PowerShell command history is typically stored separately for each user. In this case, we can see that there are history files for both thm.alex and thm.bob. I first checked `C:\Users\thm.bob\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt`, but the flag was not present. I then checked `C:\Users\thm.alex\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` and found the flag in that user's command history file
+- We know that PowerShell command history is typically stored separately for each user. In this case, we can see that there are history files for both `thm.alex` and `thm.bob`. I first checked `C:\Users\thm.bob\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt`, but the flag was not present. I then checked `C:\Users\thm.alex\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` and found the flag in that user's command history file
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/dcc55dce-2009-4f3a-8054-e067a6693c5a" />
