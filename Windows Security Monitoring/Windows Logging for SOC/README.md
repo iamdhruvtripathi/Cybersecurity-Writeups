@@ -176,3 +176,44 @@ Start your Windows monitoring journey by learning how to use system logs to dete
 </p>
 
 - Answer: `hkfasfsafg.click`
+
+## Task 7
+
+### Review the Administrator's PS history on the attached VM. Which PowerShell command was executed first?
+
+- The `ConsoleHost_history.txt` is located at `C:\Users\
+Administrator\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt`. Essentially, this is a plain text file automatically created by PowerShell. It simply records every command someone types into a PowerShell window and is immediately updated when they press `Enter` to submit a command. When we see the content of this file, we cans see the first command at the top saved in this file
+
+```
+Get-Content "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/47034e0a-3b55-457c-88a7-6c365e35a987" />
+</p>
+
+- Answer: `Get-ComputerInfo`
+
+### When did the Administrator run the first PS command? (Format: April 18, 2025) Note: You might need to right-click the history file and open "Properties" to get the answer!
+
+- For this one we can just navigate to where the file is located via Windows Explorer and right click and then select `Properties` to see the creation date of this file
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/2c0f6842-7afd-48a3-866f-2ef29f147b90" />
+</p>
+
+- Answer: `May 18, 2025`
+
+### Can you find the flag stored in the PowerShell history? (Format: THM{...}) Note: You might want to check the PS history of other local users!
+
+- We know that PowerShell command history is typically stored separately for each user. In this case, we can see that there are history files for both thm.alex and thm.bob. I first checked `C:\Users\thm.bob\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt`, but the flag was not present. I then checked `C:\Users\thm.alex\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` and found the flag in that user's command history file
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/dcc55dce-2009-4f3a-8054-e067a6693c5a" />
+</p>
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/ff6aa0ce-095d-438e-b83d-0758f3d437a4" />
+</p>
+
+- Answer: `THM{it_was_me!}`
