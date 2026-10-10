@@ -72,3 +72,13 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 </p>
 
 - Answer: `203.205.34.107`
+
+### Can you get the real Workstation Name (hostname) of the threat actor?
+
+- To identify the originating workstation, we can look at the preceding Event ID `4624` with Logon Type `3`. Since this event has the same source IP address and occurred just ~3 seconds before the successful RDP logon (Logon Type `10`), it strongly suggests that both events are related. This can occur when Network Level Authentication (NLA) is enabled, as authentication may generate a Type `3` event before the full RDP session is established. We can then check the Type `3` event's Workstation Name field to identify the originating workstation, if recorded
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f76c6bf3-5692-44f6-9adb-d683af799bf4" />
+</p>
+
+- Answer: `DESKTOP-QNBC4UU`
