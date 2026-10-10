@@ -1,4 +1,4 @@
-<p align="center">
+<img width="1512" height="787" alt="image" src="https://github.com/user-attachments/assets/13217436-9d21-4040-a9d1-8522e2d8b74c" /><p align="center">
   <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="150" alt="TryHackMe Logo">
 </p>
 
@@ -65,4 +65,10 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 
 ### Which IP managed to breach the host via RDP (Logon Type 10)?
 
-- 
+- A successful Windows logon is recorded as Security Event ID `4624`. We can filter the logs for this event and examine the Logon Type field. Logon Type `10` indicates a RemoteInteractive logon, typically associated with RDP. By identifying the relevant event and examining its `Source Network Address` field, we can determine the IP address associated with the successful RDP login
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/dffc301d-172c-42a9-afa3-22e07923e086" />
+</p>
+
+- Answer: `203.205.34.107`
