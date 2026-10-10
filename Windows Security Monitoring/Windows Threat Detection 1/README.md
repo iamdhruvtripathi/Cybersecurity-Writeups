@@ -44,3 +44,25 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 </p>
 
 - Answer: `Phishing`
+
+## Task 3
+
+### Which user seems to be most actively brute-forced by botnets?
+
+- Botnets typically attempt to log in using many different passwords, resulting in numerous failed logon events recorded as Event ID `4625`
+  
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/90f26135-5d54-490a-b2a8-d384264f9647" />
+</p>
+
+- We can see that password guesses were made just seconds apart, indicating automated activity rather than manual attempts. Furthermore, after reviewing the logs, I found numerous attempts targeting the `ADMINISTRATOR` account, each using a different password
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/2f0fbfef-869e-4b7f-9948-2078ba87b152" />
+</p>
+
+- Answer: `Administrator`
+
+### Which IP managed to breach the host via RDP (Logon Type 10)?
+
+- 
