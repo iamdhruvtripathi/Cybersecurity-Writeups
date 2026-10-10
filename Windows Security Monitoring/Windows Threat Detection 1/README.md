@@ -37,10 +37,10 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 
 ### Which Initial Access method relies on a user opening a malicious email attachment?
 
+- This is known as phishing, where an attacker tricks a user into opening a malicious email attachment. The attachment may install malware or give the attacker unauthorized access to the system
+
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/fb2eb120-8403-4990-8310-07fae7b4dbbb" />
 </p>
-
-- This is known as phishing, where an attacker tricks a user into opening a malicious email attachment. The attachment may install malware or give the attacker unauthorized access to the system
 
 - Answer: `Phishing`
