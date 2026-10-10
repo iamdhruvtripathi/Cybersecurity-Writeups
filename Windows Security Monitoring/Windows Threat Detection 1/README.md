@@ -27,7 +27,7 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 
 ### Which MITRE technique ID describes Initial Access via a vulnerable mail server?
 
-This technique ID describes exploiting a vulnerability in an internet facing application, such as a vulnerable mail server to gain initial access to a network
+- This technique ID describes exploiting a vulnerability in an internet facing application, such as a vulnerable mail server to gain initial access to a network
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/ecc4db80-d336-4254-944c-27bd90d63c77" />
