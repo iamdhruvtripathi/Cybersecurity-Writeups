@@ -82,3 +82,47 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 </p>
 
 - Answer: `DESKTOP-QNBC4UU`
+
+## Task 4
+
+### Let's play the role of the untrained user and mindlessly open the COM file. Run the www.skype.com file from the Phishing Case 1 folder, which flag do you get?
+
+- We can click on this `COM` file as if we were a untrained user
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/bee31365-b78a-4a2e-beab-3c65c724fbf5" />
+</p>
+
+- It opened command prompt and now we got our flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/121b0a8b-6973-443a-bbf7-e19f3806b1eb" />
+</p>
+
+- Answer: `THM{misleading_extension}`
+
+### Continue with the second attachment from the Phishing Case 2 folder. From which URL does the malicious LNK download the next stage malware?
+
+- First thing we need to do is extract the zip file and once we do that, we can click on the `New Store PC!` folder
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/2b364b8f-b5c6-4195-a358-ee12119077ea" />
+</p>
+
+- In the folder we can see a `.png` file and then the malicious `.lnk` file and right-clicking it and then selecting `Properties` we can see the URL in the `Target` field
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/cc82c943-5c44-4bf5-b18e-26eb4dd6d9dd" />
+</p>
+
+- Answer: `http://wp16.hqywlqpa.thm:8000/cgi-bin/f`
+
+### Finally, move on to the Phishing Case 3 folder and review its content. What is the name of the double-extension file you see there?
+
+- We can see the file at the top
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7182414e-e3cf-41c6-bb56-d8556dde5ee1" />
+</p>
+
+- Answer: `best-cat.jpg.exe`
