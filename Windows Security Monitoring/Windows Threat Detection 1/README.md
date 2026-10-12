@@ -203,7 +203,7 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 
 - File creation is tracked by Sysmon Event ID `11`. Here, we can see the file dropped by the malicious executable. The `Image:` line reads `E:\Open Sandisk 4GB USB.exe` (the fake USB program), which created and dropped a new file named `winupdate.exe` into the suspicious `C:\Users\Public\Documents\` directory
 
-<p aign="center">
+<p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/c0fddafe-009f-4f1a-9585-3abff2282b3f" />
 </p>
 
