@@ -169,7 +169,7 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/004bb601-3a92-4060-9e01-7d5058e3aaeb" />
 </p>
 
-- We can see here the active process in the `Image` field is `C:\Users\Administrator\Pictures\best-cat.jpg.exe` as the running binary. Furthermore, the `CommandLine:` field shows it ran directly from he `Pictures` folder location and it was executed ~23 seconds after the file was unarchived. Lastly, we can see the process ID in the `ProcessId` field
+- We can see here the active process in the `Image` field is `C:\Users\Administrator\Pictures\best-cat.jpg.exe` as the running binary. Furthermore, the `CommandLine:` field shows it ran directly from the `Pictures` folder location and it was executed ~23 seconds after the file was unarchived. Lastly, we can see the process ID in the `ProcessId` field
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/36d0c56f-91de-4461-80ba-930e11df3ba0" />
