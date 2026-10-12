@@ -232,6 +232,4 @@ ch
 
 ## Conclusion
 
-Conclusion
-
 In this room, I learned how to detect common Windows Initial Access techniques by analyzing Security logs and Sysmon events. I practiced identifying brute-force attacks, suspicious RDP logons, phishing attachments, malware execution, malicious DNS queries, and USB malware propagation. Overall, this room strengthened my skills in Windows threat detection, log analysis, and incident investigation by teaching me how to correlate events, trace attack activity, and identify potential indicators of compromise
