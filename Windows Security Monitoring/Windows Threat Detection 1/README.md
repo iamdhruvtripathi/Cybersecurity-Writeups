@@ -212,9 +212,24 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 ### To which other USB did the malware propagate? (Format: just the letter, e.g. X:)
 
 - We can see here the malware trying to spread itself where it detected another USB drive was present and copied itself to that new drive and renamed the copy to `Open Data Traveler 32 GB USB.exe`
-
+ch
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/c5071d4e-0b61-4b38-9845-1fd34cab3824" />
 </p>
 
 - Answer: `F:`
+
+## Skills Learned
+- Identifying Initial Access techniques using MITRE ATT&CK, including Exploit Public-Facing Application (`T1190`) and Phishing
+- Analyzing Windows Security Event IDs `4624` and `4625` to detect successful logons, failed authentication attempts, brute-force attacks, and suspicious RDP connections
+- Investigating logon types and workstation names to identify potential threat actors and trace remote access activity
+- Recognizing phishing techniques such as misleading file extensions, malicious COM files, deceptive LNK shortcuts, and double-extension executables
+- Using Sysmon Event IDs `1`, `11`, `15`, and `22` to investigate process creation, file creation, alternate data streams, and DNS queries
+- Tracing downloaded files from the browser to their extraction locations and identifying the execution of suspicious files
+- Identifying potentially malicious domains contacted by malware and investigating possible command-and-control activity
+- Detecting suspicious USB activity, including malware execution, dropped payloads, and propagation to additional removable drives
+- Correlating Windows event logs to reconstruct attack timelines and understand the sequence of malicious activities
+
+## Conclusion
+
+- In this room, I learned how to investigate common Windows Initial Access techniques and detect suspicious activity through Windows Security logs and Sysmon events. I practiced identifying brute-force attacks, tracing successful RDP logons, analyzing phishing attachments, tracking downloaded malware, and investigating suspicious network connections. I also explored how malware can spread through removable USB drives and create additional malicious files on a compromised system. Overall, this room strengthened my understanding of Windows threat detection, log analysis, and incident investigation. It demonstrated the importance of correlating multiple event IDs, examining process execution details, and following the sequence of events to identify potential indicators of compromise and better understand an attacker's actions
