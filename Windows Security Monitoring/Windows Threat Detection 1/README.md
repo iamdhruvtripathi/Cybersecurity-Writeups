@@ -153,11 +153,11 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 
 ### In which folder did the user unarchive the suspicious file?
 
+- I stayed on filtering for Sysmon Event ID `11` and we can see only ~15 seconds later `EXPLORER.exe` aka Windows Explorer was to unarchive the suspicious file `best-cat.jpg.exe` inside a different the `Pictures` folder. We know that both events occur on the same exact endpoint (`THM-PC`) and are executed under the session of the exact same user (`THM-PC\Administrator`)
+
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/fa625d4d-ae41-4dbb-af2a-bbcdce9c2379" />
 </p>
-
-- I stayed on filtering for Sysmon Event ID `11` and we can see only ~15 seconds later `EXPLORER.exe` aka Windows Explorer was to unarchive the suspicious file `best-cat.jpg.exe` inside a different the `Pictures` folder. We know that both events occur on the same exact endpoint (`THM-PC`) and are executed under the session of the exact same user (`THM-PC\Administrator`)
 
 - Answer: `C:\Users\Administrator\Pictures`
 
