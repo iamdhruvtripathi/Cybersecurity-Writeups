@@ -161,7 +161,7 @@ Explore common Initial Access methods on Windows and learn how to detect them.
 
 - Answer: `C:\Users\Administrator\Pictures`
 
-## What is the process ID of the launched phishing malware?
+### What is the process ID of the launched phishing malware?
 
 - Here we can filter the log for Sysmon Event ID `1` (Process Creation) to find signs of the malicious executable running
 
