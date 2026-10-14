@@ -64,13 +64,13 @@ Discover how to detect and analyze the first steps of threat actors after breach
 - Scrolling down we can see the that this log captures the initial execution of the malware, showing `invoice.pdf.exe` launching at `3:23:40 AM` with a unique ProcessId of `3392`
 
 <p align="center">
-<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8814de72-61b1-4ff5-b34e-63d7e4a6dde5" />
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/c608e855-80f1-4e09-b007-b17e39e283ab" />
 </p>
 
 - Below, this log captures `whoami.exe` running as the very first discovery command spawned by the malware at `3:23:41 AM`. By looking at the details pane, we can verify it is directly tied to the initial infection because its ParentProcessId is `3392`, which matches the `ProcessId` of the `invoice.pdf.exe` process that ran earlier
 
 <p align="center">
-<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/afbb5e5e-4222-4ad6-9b22-a58cd260d741" />
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/efa0e496-92c1-47d4-9767-c46c8de3bf87" />
 </p>
 
 - Answer: `whoami`
