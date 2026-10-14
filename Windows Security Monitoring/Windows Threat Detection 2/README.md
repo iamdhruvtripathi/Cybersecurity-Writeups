@@ -94,3 +94,31 @@ Discover how to detect and analyze the first steps of threat actors after breach
 </p>
 
 - Answer: `exfil.beecz.cafe`
+
+### What is the Facebook password that the user saved in Chrome? (Chrome menu > Passwords and autofill > Password Manager)
+
+- We can open `Chrome` and then go to `Chrome menu` (the 3 dots) > `Passwords` and `Google Password Manager`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/0a3ab696-220e-41a4-b477-595e84b7ebd1" />
+</p>
+
+- However whenever we click on the button to see the password, it requires the password for the admin account
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/eb38b5fe-c797-4323-b8b7-1e76a259397c" />
+</p>
+
+- Luckily for us TryHackMe gave us that password in the beginning
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/15a4a40c-e1f0-453b-aa52-444951d059ec" />
+</p>
+
+- Here we can see the password for facebook
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/eb0c12ad-5405-4fc3-ac6f-500d03dcfbed" />
+</p>
+
+- Answer: `nsAghv51BBav90!`
