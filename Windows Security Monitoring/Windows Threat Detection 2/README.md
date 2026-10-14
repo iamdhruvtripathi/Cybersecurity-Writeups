@@ -137,10 +137,80 @@ Discover how to detect and analyze the first steps of threat actors after breach
 
 ### What is the secret PDF file explaining TryHackMe's internal network? (Look for the file on the Desktop, Downloads, and Documents)
 
-- The name of the diagram is in `Documents`
+- The name of the diagram is in `Downloads`
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/950888a6-a1e6-4b20-8dcf-0e19b50be912" />
 </p>
 
 - Answer: `thm-network-diagram-2025.pdf`
+
+## Task 5
+
+### Looking at Sysmon logs, what directory does the stealer create?
+
+- First thing to do is run `stealer.exe`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1cefdb19-0ffd-4584-b338-a469ce2ecf7e" />
+</p>
+
+- We can filter for Sysmon Event ID `1` (Process Creation) to identify processes executed by `stealer.exe` and investigate its activity
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7cab5586-3200-410d-8e31-dfcc8eb6e79f" />
+</p>
+
+- We can go through the logs and see that this one in particular captures a process creation event (Sysmon Event ID `1`) where `cmd.exe` was executed. The command ran a `mkdir` command to generate a new directory named `staging_58f1` within the system's environment defined `%temp%` folder
+  
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/a4eb552a-6d3f-48b5-acf1-6548a83bec79" />
+</p>
+
+- Answer: `staging_58f1`
+
+### Which three file extensions does the malware search for? Format: Separate by comma in alphabetic order (e.g. bat, txt)
+
+- Looking at this log we can see the actor used a `cmd.exe` wrapper (PID `6528`) with environment variables to dynamically copy all `.docx` files from the Desktop to a temporary staging folder
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/5e404654-3e4b-4feb-9659-bc73f5ed070f" />
+</p>
+
+- To go one step further we can see the actual `xcopy.exe` child process (PID `6544`) executing the copy operation with the environment variables fully expanded. The placeholders have been resolved into absolute file paths, specifically targeting the `Administrator` user profile and staging the files directly into the local hidden temporary directory
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/55c7651c-d499-4e56-91d1-9974d5bacac1" />
+</p>
+
+- Similar thing occurs with these processes below but instead it is a `.pdf` and `.xlsx` collection rule that collects all PDF files and Excel spreadsheets from the Desktop into the temporary directory
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/3aaa31ba-546f-4bfc-aa04-834a5b1781b1" />
+</p>
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/abce51d7-c675-4f7c-b4af-8fa0984a9da0" />
+</p>
+
+- Answer: `docx, pdf, xlsx`
+
+### Which PowerShell cmdlet does the malware use to get clipboard content?
+
+- Here the logs shows the actor used PowerShell (PID `5360`) to steal the contents of the system clipboard. The command calls `Get-Clipboard` and redirects whatever text was currently copied into a new file named `clipboard.txt` inside the same temporary staging directory. This allows the attacker to grab potentially sensitive data like copied passwords, URLs, or notes
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/d1721339-73db-48e3-9459-3671a1ecbb2b" />
+</p>
+
+### Which domain does the malware exfiltrate the data to?
+
+- We can use Sysmon Event ID `22` to observe any DNS queries being made. Here the malware (`stealer.exe`) performed a DNS lookup for an external Amazon S3 bucket
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/d7210047-6fba-4915-a36e-ed4a42c71018" />
+</p>
+
+- Answer: `collecteddata-storage-2025.s3.amazonaws.com`
+
+## Task 6
