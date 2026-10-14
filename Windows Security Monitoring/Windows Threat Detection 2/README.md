@@ -99,7 +99,7 @@ Discover how to detect and analyze the first steps of threat actors after breach
 
 ### What is the Facebook password that the user saved in Chrome? (Chrome menu > Passwords and autofill > Password Manager)
 
-- We can open `Chrome` and then go to the `Chrome menu` (the 3 dots) > `Passwords` > `Google Password Manager`
+- We can open `Chrome` and then go to the `Chrome menu` (the 3 dots) > `Passwords and autofill` > `Google Password Manager`
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/0a3ab696-220e-41a4-b477-595e84b7ebd1" />
