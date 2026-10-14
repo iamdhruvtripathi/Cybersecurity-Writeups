@@ -203,6 +203,8 @@ Discover how to detect and analyze the first steps of threat actors after breach
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/d1721339-73db-48e3-9459-3671a1ecbb2b" />
 </p>
 
+- Answer: `Get-Clipboard`
+
 ### Which domain does the malware exfiltrate the data to?
 
 - We can use Sysmon Event ID `22` to observe any DNS queries being made. Here the malware (`stealer.exe`) performed a DNS lookup for an external Amazon S3 bucket
