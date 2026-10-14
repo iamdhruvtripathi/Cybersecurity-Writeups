@@ -63,7 +63,7 @@ This repository contains all my public TryHackMe write-ups, including walkthroug
   - [Windows Security Monitoring](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/tree/main/Windows%20Security%20Monitoring)
     - [Windows Logging for SOC](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Windows%20Security%20Monitoring/Windows%20Logging%20for%20SOC/README.md)
     - [Windows Threat Detection 1](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Windows%20Security%20Monitoring/Windows%20Threat%20Detection%201/README.md) 
-    - [Windows Threat Detection 2](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Windows%20Security%20Monitoring/Windows%20Threat%20Detection%202/README.md) 🚧 IN PROGRESS 🚧 
+    - [Windows Threat Detection 2](https://github.com/iamdhruvtripathi/Cybersecurity-Writeups/blob/main/Windows%20Security%20Monitoring/Windows%20Threat%20Detection%202/README.md)
 
 ### SOC Simulator
   - [Introduction To Phishing (SOC Simulator 🌐)](https://github.com/iamdhruvtripathi/TryHackMe-Room-Writeups/blob/main/SOC%20Simulator/Introduction%20to%20Phishing/README.md)
