@@ -61,7 +61,7 @@ Discover how to detect and analyze the first steps of threat actors after breach
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/ff5525db-e860-4c76-93bf-4c43a10a564d" />
 </p>
 
-- Scrolling down we can see the that this log captures the initial execution of the malware, showing `invoice.pdf.exe` launching at `3:23:40 AM` with a unique ProcessId of `3392`
+- Scrolling down we can see the that this log captures the initial execution of the malware, showing `invoice.pdf.exe` launching at `3:23:40 AM` with a unique `ProcessId` of `3392`
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/c608e855-80f1-4e09-b007-b17e39e283ab" />
