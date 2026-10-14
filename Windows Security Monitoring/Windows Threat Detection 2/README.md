@@ -256,3 +256,22 @@ Discover how to detect and analyze the first steps of threat actors after breach
 </p>
 
 - Answer: `THM{power_of_powershell}`
+
+## Skills Learned
+
+- Analyzed Windows user accounts and identified privileged group memberships using the `net user` command
+- Navigated Windows Event Viewer to investigate Sysmon operational logs and identify suspicious activity
+- Used Sysmon Event ID `1` to track process creation, analyze command-line arguments, and establish parent-child process relationships
+- Used Sysmon Event ID `22` to identify DNS queries and investigate potential command-and-control communications and data exfiltration
+- Identified malware discovery techniques, including gathering user information with `whoami` and checking for Microsoft Defender for Endpoint using `tasklist` and `findstr`
+- Investigated information-stealing malware by tracing its execution, file system activity, and data collection behavior
+- Identified sensitive information stored on a compromised Windows system, including browser-saved credentials, private SSH keys, and confidential documents
+- Detected file collection and staging techniques involving temporary directories and file extensions such as `.docx`, `.pdf`, and `.xlsx`
+- Recognized clipboard collection techniques using the PowerShell `Get-Clipboard` cmdlet
+- Investigated potential data exfiltration by identifying external domains associated with malware activity, including Amazon S3 endpoints
+- Compared different file download techniques using a web browser, `curl.exe`, `certutil.exe`, and PowerShell's `Invoke-WebRequest`
+- Improved the ability to correlate process creation events, command-line activity, and DNS queries to reconstruct suspicious behavior and understand the stages of a Windows malware attack
+
+## Conclusion
+
+This room provided valuable hands-on experience in understanding how threat actors operate within Windows environments and how their activities can be detected through system logs and monitoring tools. It helped strengthen my knowledge of threat detection, log analysis, and identifying suspicious behavior. I also gained a better understanding of how important it is to investigate unusual activity and recognize potential security risks. Overall, this room improved my understanding of Windows security and the role of monitoring and investigation in detecting and responding to cyber threats
