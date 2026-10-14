@@ -27,7 +27,7 @@ Discover how to detect and analyze the first steps of threat actors after breach
 
 ### Open CMD and type "net user Administrator". Which privileged group does the user belong to?
 
-- We can run `net user Administrator` which shows information about the Windows account named `Administrator`. We can see below that they belong to the `Administrator` local group
+- We can run `net user Administrator` which shows information about the Windows account named `Administrator`. We can see below that they belong to the `Administrators` local group
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/c87a482a-fedb-45ac-ba01-94c8f921a549" />
