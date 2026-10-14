@@ -46,3 +46,51 @@ Discover how to detect and analyze the first steps of threat actors after breach
 - Answer: `C:\Windows\System32\net.exe`
 
 ## Task 3
+
+### Looking at Sysmon logs, what is the first command the invoice.pdf.exe executes?
+
+- We can go to the `Task 3` folder and run the `invoice.pdf.exe` binary
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/96c34b32-9388-4b60-97e8-fdabfa9e1e03" />
+</p>
+
+- We can filter for Sysmon Event ID `1` since we're looking for process creation events. Most of these discovery commands run as standalone processes, so Event ID `1` is the easiest way to catch them all in action
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/ff5525db-e860-4c76-93bf-4c43a10a564d" />
+</p>
+
+- Scrolling down we can see the that this log captures the initial execution of the malware, showing `invoice.pdf.exe` launching at `3:23:40 AM` with a unique ProcessId of `3392`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8814de72-61b1-4ff5-b34e-63d7e4a6dde5" />
+</p>
+
+- Below, this log captures `whoami.exe` running as the very first discovery command spawned by the malware at `3:23:41 AM`. By looking at the details pane, we can verify it is directly tied to the initial infection because its ParentProcessId is `3392`, which matches the `ProcessId` of the `invoice.pdf.exe` process that ran earlier
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/afbb5e5e-4222-4ad6-9b22-a58cd260d741" />
+</p>
+
+- Answer: `whoami`
+
+### Which command did the malware use to check the presence of MS Defender EDR?
+
+- Going through the logs we find the command used to check the presence of MS Defender EDR
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/162448ff-7752-4e7d-a41b-967b5efa28ef" />
+</p>
+
+- Answer: `cmd /c "tasklist /v | findstr MsSense.exe || echo No MS Defender EDR"`
+
+### To which domain did the malware send the discovered data?
+
+- We can filter for Sysmon Event ID `22` since it captures DNS queries. This lets us see exactly what external domains the malware is trying to communicate with or exfiltrate data to
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/af7f970e-6a68-429c-92ca-a6a545b0a0d3" />
+</p>
+
+- Answer: `exfil.beecz.cafe`
