@@ -95,6 +95,8 @@ Discover how to detect and analyze the first steps of threat actors after breach
 
 - Answer: `exfil.beecz.cafe`
 
+## Task 4
+
 ### What is the Facebook password that the user saved in Chrome? (Chrome menu > Passwords and autofill > Password Manager)
 
 - We can open `Chrome` and then go to `Chrome menu` (the 3 dots) > `Passwords` and `Google Password Manager`
