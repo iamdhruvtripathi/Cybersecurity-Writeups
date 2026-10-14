@@ -124,3 +124,23 @@ Discover how to detect and analyze the first steps of threat actors after breach
 </p>
 
 - Answer: `nsAghv51BBav90!`
+
+### Which interesting SSH key does the user store on disk? (Start your search from C:\Users\Administrator\)
+
+- To find the SSH key we can navigate to `C:\Users\Administrator\.ssh\` and we can see there is one ending in `.pub` and `.key`. We pick the one ending in `.key` because it is the private key while the other one is publicly shared
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/a529745a-8392-4461-8e7f-d8c8e664ab8c" />
+</p>
+
+- Answer: `thm-access-database.key`
+
+### What is the secret PDF file explaining TryHackMe's internal network? (Look for the file on the Desktop, Downloads, and Documents)
+
+- The name of the diagram is in `Documents`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/950888a6-a1e6-4b20-8dcf-0e19b50be912" />
+</p>
+
+- Answer: `thm-network-diagram-2025.pdf`
