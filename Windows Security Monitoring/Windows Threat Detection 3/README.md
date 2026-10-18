@@ -65,7 +65,7 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 
 ### How many times did the threat actor fail to log in to the Administrator?
 
-- To search for failed logins, we can filter for Windows Event ID `4624`. Below we can see there are `6` failed login attempts corresponding to the `Administrator` account
+- To search for failed logins, we can filter for Windows Event ID `4625`. Below we can see there are `6` failed login attempts corresponding to the `Administrator` account
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7104b081-414f-4dab-ad20-14f73bd9c02f" />
