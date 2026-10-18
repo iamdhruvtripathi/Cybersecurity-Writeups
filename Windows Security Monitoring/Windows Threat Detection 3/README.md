@@ -75,7 +75,7 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 
 ### After the successful login, which backdoor user did the attacker create?
 
-- We can see the attacker successfully logged over the network as detected by Windows Event ID `4624`
+- We can see the attacker successfully logged in over the network as detected by Windows Event ID `4624`
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/2facb340-d3ff-458f-892c-7bfa605e3d1c" />
