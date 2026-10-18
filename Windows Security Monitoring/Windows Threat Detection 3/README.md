@@ -81,7 +81,7 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/2facb340-d3ff-458f-892c-7bfa605e3d1c" />
 </p>
 
-- To filter for local backdoor accounts created, we can filter for Windows Event ID `4720` A user account was created)
+- To search for backdoor accounts created, we can filter for Windows Event ID `4720` (A user account was created)
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/724dc4cb-7e7c-478a-92ce-fa6465f5d46d" />
