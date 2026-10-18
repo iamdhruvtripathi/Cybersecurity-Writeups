@@ -60,3 +60,41 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 </p>
 
 - Answer: `route.m365officesync.workers.dev`
+
+## Task 3
+
+### How many times did the threat actor fail to log in to the Administrator?
+
+- To search for failed logins, we can filter for Windows Event ID `4624`. Below we can see there are `6` failed login attempts corresponding to the `Administrator` account
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7104b081-414f-4dab-ad20-14f73bd9c02f" />
+</p>
+
+- Answer: `6`
+
+### After the successful login, which backdoor user did the attacker create?
+
+- We can see the attacker successfully logged over the network as detected by Windows Event ID `4624`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/2facb340-d3ff-458f-892c-7bfa605e3d1c" />
+</p>
+
+- To filter for local backdoor accounts created, we can filter for Windows Event ID `4720` A user account was created)
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/724dc4cb-7e7c-478a-92ce-fa6465f5d46d" />
+</p>
+
+- Answer: `support`
+
+## Which privileged group was the backdoor user added to?
+
+- For this we can filter for Windows Event ID `4732` to identify which group the backdoor account was added to
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/736a0d09-f943-4ffd-ad7b-277c98b0eb2f" />
+</p>
+
+- Answer: `Administrators`
