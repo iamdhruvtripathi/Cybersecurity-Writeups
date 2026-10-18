@@ -89,7 +89,7 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 
 - Answer: `support`
 
-## Which privileged group was the backdoor user added to?
+### Which privileged group was the backdoor user added to?
 
 - For this we can filter for Windows Event ID `4732` to identify which group the backdoor account was added to
 
