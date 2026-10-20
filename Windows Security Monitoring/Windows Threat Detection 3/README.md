@@ -98,3 +98,55 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 </p>
 
 - Answer: `Administrators`
+
+## Task 4
+
+### Which Windows service was created to persist the Nessie malware?
+
+- To search for suspicious Windows services installed, we can filter for Windows Event ID `4697` which logs service installations (creations)
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7344d35d-4a5a-4022-aae7-096e2523678c" />
+</p>
+
+### Which scheduled task was created to persist the Troy malware?
+
+- To detect suspicious scheduled task creation, we can filter for Windows Security Event ID `4698` which logs when a new scheduled task is created
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/5d695942-bc2b-4916-b3e6-754df3fa24c8" />
+</p>
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/13fe6313-ee58-45e4-a92e-4d9ec8b2912e" />
+</p>
+
+- Answer: `AmazonSync`
+
+### What flag do you get after finding and running the Troy malware?
+
+- We can navigate to the path that was in the `<Command`>. I went to `Local Disk (C:)` > `Program Files` > `Common Files`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8da4ff6d-be78-49fb-a33f-5547752ea8f4" />
+</p>
+
+- However we need to find the parent command line first to get the flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/5b2f8e22-ee91-40a7-a5ed-85a6c2c6bf7d" />
+</p>
+
+- To find the parent command line we can take a look at Sysmon Event ID `1` as it records process creation events. While standard Windows Security logs might just show a process started, Sysmon Event ID `1` shows extra, more detailed info by showing fields like `ParentImage`, `ParentProcessId`, `ParentCommandLine`, etc.
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/aa454b7e-151f-4464-bf0f-4e473a49583a" />
+</p>
+
+- Entering the parent command line, we get the flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/dfe2d8c6-03a6-48a3-9a7c-f793a49c0ec6" />
+</p>
+
+- Answer: `THM{c2_is_on_schedule!}`
