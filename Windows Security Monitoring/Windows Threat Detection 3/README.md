@@ -127,7 +127,7 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 
 ### What flag do you get after finding and running the Troy malware?
 
-- We can navigate to the path that was in the `<Command`>. I went to `Local Disk (C:)` > `Program Files` > `Common Files`
+- We can navigate to the path that was in the `<Command>`. I went to `Local Disk (C:)` > `Program Files` > `Common Files`
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8da4ff6d-be78-49fb-a33f-5547752ea8f4" />
