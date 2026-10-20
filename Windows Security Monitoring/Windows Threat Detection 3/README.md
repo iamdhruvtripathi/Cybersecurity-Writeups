@@ -109,6 +109,8 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7344d35d-4a5a-4022-aae7-096e2523678c" />
 </p>
 
+- Answer: `Data Protection Service`
+
 ### Which scheduled task was created to persist the Troy malware?
 
 - To detect suspicious scheduled task creation, we can filter for Windows Security Event ID `4698` which logs when a new scheduled task is created
