@@ -209,3 +209,25 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 </p>
 
 - Answer: `THM{persisting_in_basket!}`
+
+## Task 6
+
+### What is the biggest threat to most corporate Windows networks?
+
+- Active Directory is important because it connects and manages many systems. If hackers compromise it, they may be able to use that access to cause widespread damage with ransomware
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f253affc-37a3-4739-91a8-878728c30dda" />
+</p>
+
+- Answer: `Ransomware`
+
+### At which stage is it best to detect and stop the attack (e.g. Exfiltration)?
+
+- All complex attacks start from a simple single breach but then slowly turn into a big beach. The best stage to detect and stop an attack is ideally right after initial access
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/22fc01a3-ca58-4738-b170-e0758644e1cd" />
+</p>
+
+- Answer: `Initial Access`
