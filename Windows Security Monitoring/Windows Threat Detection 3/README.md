@@ -196,7 +196,7 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/bb48fabb-3840-45db-a5c5-936d0641c19e" />
 </p>
 
-- We can filter for Sysmon Event ID `13` as it tracks any creation/modification of run keys in the `Sysmon (Before Reboot)` logs, we see the value created. The log shows a new value named `Basket` was added to the Windows run persistence key. This key points directly to an executable file located at `C:\Users\Public\kitten.exe`. This registry change ensures the program automatically runs whenever the system boots up
+- We can filter for Sysmon Event ID `13` as it tracks any creation/modification of run keys in the `Sysmon (Before Reboot)` logs, we see the value created. The log shows a new value named `Basket` was added to the Windows run persistence key. This key points directly to an executable file located at `C:\Users\Public\kitten.exe`. This registry change ensures the program automatically runs whenever the user logs on
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/645b308a-2db4-4338-b317-6e78bdfe9e2c" />
