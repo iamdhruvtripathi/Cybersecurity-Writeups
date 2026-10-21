@@ -248,4 +248,4 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 
 ## Conclusion
 
-- This room provided hands-on experience in detecting Windows threats by analyzing Sysmon and Windows Security logs to identify malware execution, suspicious downloads, Command and Control activity, unauthorized account creation, and persistence techniques. It strengthened my understanding of how attackers maintain access to compromised systems and highlighted the importance of early threat detection to prevent further compromise and ransomware attacks
+This room provided hands-on experience in detecting Windows threats by analyzing Sysmon and Windows Security logs to identify malware execution, suspicious downloads, Command and Control activity, unauthorized account creation, and persistence techniques. It strengthened my understanding of how attackers maintain access to compromised systems and highlighted the importance of early threat detection to prevent further compromise and ransomware attacks
