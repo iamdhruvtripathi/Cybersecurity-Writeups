@@ -235,14 +235,14 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 ## Skills Learned
 
 - Analyzing Sysmon logs to investigate suspicious activity and process execution
-- Identifying downloaded malware and Alternate Data Streams (ADS) using Event ID 15
+- Identifying downloaded malware and Alternate Data Streams (ADS) using Event ID `15`
 - Tracing malicious PowerShell commands, malware downloads, and C2 connections
-- Investigating failed and successful logins using Event IDs 4625 and 4624
-- Detecting backdoor accounts and unauthorized group membership changes using Event IDs 4720 and 4732
-- Identifying malware persistence through Windows services and scheduled tasks using Event IDs 4697 and 4698
-- Analyzing registry Run keys using Event ID 13 to detect persistence mechanisms
-- Examining parent processes and command-line arguments using Event ID 1
-- Investigating suspicious DNS queries using Event ID 22 to identify potential C2 domains
+- Investigating failed and successful logins using Event IDs `4625` and `4624`
+- Detecting backdoor accounts and unauthorized group membership changes using Event IDs `4720` and `4732`
+- Identifying malware persistence through Windows services and scheduled tasks using Event IDs `4697` and `4698`
+- Analyzing registry Run keys using Event ID `13` to detect persistence mechanisms
+- Examining parent processes and command-line arguments using Event ID `1`
+- Investigating suspicious DNS queries using Event ID `22` to identify potential C2 domains
 - Correlating Windows Security and Sysmon logs to reconstruct attack timelines
 - Understanding the importance of early threat detection to prevent ransomware attacks
 
