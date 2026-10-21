@@ -152,3 +152,60 @@ Learn how threat actors manage to maintain access to the breached Windows hosts.
 </p>
 
 - Answer: `THM{c2_is_on_schedule!}`
+
+## Task 5
+
+### What is the parent process image of the "Odin" malware?
+
+- We can go to the `Sysmon (After Reboot)` logs and filter for Sysmon Event ID `1` as it records when processes are launched showing detailed information such as `ParentImage`, `ParentCommandLine`, etc. Then, we can check the `ParentImage` field to identify which program launched the `Odin` malware
+
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/ea2a8026-c021-494a-ae2e-5aec22a73011" />
+</p>
+
+- Answer: `C:\Windows\explorer.exe`
+
+### What is the last line that the "Odin" malware outputs?
+
+- I navigated to where the file was located using the path in the screenshot above
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/b29992e1-3752-41b0-b40a-b9701bf70561" />
+</p>
+
+- However, I tried clicking and running the file but it opened and closed really fast so I couldn't properly see the last line. However, we can search for this process launch in the logs via filtering for Sysmon Event ID `1`. The log shows the command prints text to mimic a bad script. First, it displays `Doing bad stuff...` and loops 10 times to print random numbers. Finally, it prints `Done doing bad stuff!` right before closing
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/0cf29394-a03b-4768-8555-f8b91bc0e674" />
+</p>
+
+- Answer: `Done doing bad stuff!`
+
+### What flag do you get after finding and running the "Kitten" malware?
+
+- The `Kitten` malware is located here
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/96964615-0658-4a10-baa6-7a5539aede95" />
+</p>
+
+- However, we first have to answer the question before we can get the flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/bb48fabb-3840-45db-a5c5-936d0641c19e" />
+</p>
+
+- We can filter for Sysmon Event ID `13` as it tracks any creation/modification of run keys in the `Sysmon (Before Reboot)` logs, we see the value created. The log shows a new value named `Basket` was added to the Windows run persistence key. This key points directly to an executable file located at `C:\Users\Public\kitten.exe`. This registry change ensures the program automatically runs whenever the system boots up
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/645b308a-2db4-4338-b317-6e78bdfe9e2c" />
+</p>
+
+- Typing the value name in, we get the flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/49351d66-f937-4855-a8b0-a4e573933464" />
+</p>
+
+- Answer: `THM{persisting_in_basket!}`
