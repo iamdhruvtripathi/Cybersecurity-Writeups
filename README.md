@@ -96,8 +96,8 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 | 🪟 **[Windows Security Monitoring](./Windows%20Security%20Monitoring)** | [Windows Logging for SOC](./Windows%20Security%20Monitoring/Windows%20Logging%20for%20SOC/README.md) | 📘 |
 | | [Windows Threat Detection 1](./Windows%20Security%20Monitoring/Windows%20Threat%20Detection%201/README.md) | 📘 |
 | | [Windows Threat Detection 2](./Windows%20Security%20Monitoring/Windows%20Threat%20Detection%202/README.md) | 📘 |
-| | [Windows Threat Detection 3](./Windows%20Security%20Monitoring/Windows%20Threat%20Detection%203/README.md) | 🚧 |
-| 🐧 **[Linux Security Monitoring](./Windows%20Security%20Monitoring)**
+| | [Windows Threat Detection 3](./Windows%20Security%20Monitoring/Windows%20Threat%20Detection%203/README.md) | 📘 |
+| 🐧 **[Linux Security Monitoring](./Linux%20Security%20Monitoring)** | [Linux Logging for SOC](./Linux%20Security%20Monitoring/Linux%20Logging%20for%20SOC/README.md) | 📘 |
 
 ---
 
