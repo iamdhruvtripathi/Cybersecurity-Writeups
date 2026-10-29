@@ -66,3 +66,50 @@ Explore key Linux log sources and learn how to use them in your SOC triage.
 </p>
 
 - Answer: `xerxes`
+
+## Task 4
+
+### According to the VM's package manager logs, which version of unzip was installed on the system?
+
+- To find the installed version of unzip, we can navigate to /var/log/apt, which stores package management history on Debian-based systems. Then, we can run cat history.log | grep -A 3 unzip to search for entries related to unzip, including installation or upgrade details.
+
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/314edc8d-6053-467c-bbf4-6d53faab9157" />
+</p>
+
+- Answer: `6.0-28ubuntu4.1`
+
+### What is the flag you see in one of the users' bash history?
+
+- To find the flag I looked at the current user's bash history and there was no flag here but I noticed they had switched to the root user via `sudo su` which made me think the flag might be in the root user's bash history
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/aa31a5fc-eb90-409c-babd-4e9d7af51794" />
+</p>
+
+- I typed `sudo su` and checked the bash history and found the flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/73839dc9-a2b9-4c54-adca-3deebff946ed" />
+</p>
+
+- Answer: `THM{note_to_remember}`
+
+## Task 5
+
+### Which Linux system call is commonly used to execute a program?
+
+- This is called the `execve` system call, where the shell hands a program's file path over to the kernel and asks it to take control, allocate memory, and run that tool on the computer's hardware
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/f9780dae-5a55-4615-8dcf-5f80e81de9e3" />
+</p>
+
+- Answer: `execve`
+
+### Can a typical program open a file or create a process bypassing system calls? (Yea/Nay)
+
+- A typical program cannot bypass system calls because the hardware strictly prevents it. Only the kernel is allowed to talk directly to your hard drive to open files or manage CPU cores to create processes. The only way a normal program can do these things is by talking to the kernel using a system call
+
+- Answer: `Nay`
