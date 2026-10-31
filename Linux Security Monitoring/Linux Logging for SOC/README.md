@@ -113,3 +113,35 @@ Explore key Linux log sources and learn how to use them in your SOC triage.
 - A typical program cannot bypass system calls because the hardware strictly prevents it. Only the kernel is allowed to talk directly to your hard drive to open files or manage CPU cores to create processes. The only way a normal program can do these things is by talking to the kernel using a system call
 
 - Answer: `Nay`
+
+## Task 6
+
+### When was the secret.thm file opened for the first time? (MM/DD/YY HH:MM:SS) Note: Access to this file is logged with the "file_thmsecret" key.
+
+- We can filter audit logs using `ausearch -i -k file_thmsecret`, where `-i` interprets and displays event values in a human readable format, and `-k` searches for events associated with the specified audit key (`file_thmsecret`)
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8e6be54e-8498-4645-8951-80465486e978" />
+</p>
+
+- Answer: `08/13/25 18:36:54`
+
+### What is the original file name downloaded from GitHub via wget? Note: Wget process creation is logged with the "proc_wget" key.
+
+- We can do the same thing as the last question but this time filtering via the auditd key `proc_wget` and we can see the file downloaded from Github below 
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/c35f6c33-8712-41c7-808c-47f1c9750efe" />
+</p>
+
+- Answer: `naabu_2.3.5_linux_amd64.zip`
+
+### Which network range was scanned using the downloaded tool? Note: There is no dedicated key for this event, but it's still in auditd logs.
+
+- Here, we notice that there was a file downloaded named `naabu` from the previous question. Naabu is a networking tool that can be used to scan a network and so we can run the command `ausearch -i | grep naabu` and we get the answer
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8846d406-d69a-4429-9c20-d1ac9de27bae" />
+</p>
+
+- Answer: `192.168.50.0/24`
