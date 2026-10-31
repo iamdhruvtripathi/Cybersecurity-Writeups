@@ -110,7 +110,7 @@ Explore key Linux log sources and learn how to use them in your SOC triage.
 
 ### Can a typical program open a file or create a process bypassing system calls? (Yea/Nay)
 
-- A typical program cannot bypass system calls because the hardware strictly prevents it. Only the kernel is allowed to talk directly to your hard drive to open files or manage CPU cores to create processes. The only way a normal program can do these things is by talking to the kernel using a system call
+- A typical program cannot bypass system calls because the hardware strictly prevents it. Only the kernel is allowed to talk directly to the hard drive to open files or manage CPU cores to create processes. The only way a normal program can do these things is by talking to the kernel using a system call
 
 - Answer: `Nay`
 
