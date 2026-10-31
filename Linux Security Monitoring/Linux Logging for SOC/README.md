@@ -71,7 +71,7 @@ Explore key Linux log sources and learn how to use them in your SOC triage.
 
 ### According to the VM's package manager logs, which version of unzip was installed on the system?
 
-- To find the installed version of unzip, we can navigate to /var/log/apt, which stores package management history on Debian-based systems. Then, we can run cat history.log | grep -A 3 unzip to search for entries related to unzip, including installation or upgrade details.
+- To find the installed version of unzip, we can navigate to `/var/log/apt`, which stores package management history on Debian-based systems. Then, we can run `cat history.log | grep -A 3 unzip` to search for entries related to unzip, including installation or upgrade details
 
 
 <p align="center">
