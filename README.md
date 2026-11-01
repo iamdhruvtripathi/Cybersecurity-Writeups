@@ -42,7 +42,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 | Path | Rooms Completed | Status |
 |---|:---:|:---:|
 | 💻 Cyber Security 101 | 12 | ✅ |
-| 🔵 SOC Level 1 | 27 / 28 | 🚧 |
+| 🔵 SOC Level 1 | 28 / 29 | 🚧 |
 | 🌐 SOC Simulator | 1 | ✅ |
 | 🏝️ Hacker Holidays 2026 | 15 / 15 | ✅ |
 
@@ -98,6 +98,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 | | [Windows Threat Detection 2](./Windows%20Security%20Monitoring/Windows%20Threat%20Detection%202/README.md) | 📘 |
 | | [Windows Threat Detection 3](./Windows%20Security%20Monitoring/Windows%20Threat%20Detection%203/README.md) | 📘 |
 | 🐧 **[Linux Security Monitoring](./Linux%20Security%20Monitoring)** | [Linux Logging for SOC](./Linux%20Security%20Monitoring/Linux%20Logging%20for%20SOC/README.md) | 📘 |
+| | [Linux Threat Detection 1](Linux%20Security%20Monitoring/Linux%20Threat%20Detection%201/README.md) | 🚧 |
 
 ---
 
