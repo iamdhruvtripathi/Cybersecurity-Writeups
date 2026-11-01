@@ -145,3 +145,20 @@ Explore key Linux log sources and learn how to use them in your SOC triage.
 </p>
 
 - Answer: `192.168.50.0/24`
+
+## Skills Learned
+
+- Navigating and analyzing Linux log files located in `/var/log`
+- Using `grep` and other command-line tools to filter and search log entries
+- Investigating authentication logs to identify failed SSH login attempts and suspicious user account activity
+- Analyzing package manager logs to identify installed software and package versions
+- Examining Bash history files to uncover potentially suspicious commands and user activity
+- Understanding how Linux system calls, particularly `execve`, allow programs to interact with the kernel
+- Using `ausearch` to investigate auditd logs and filter events based on specific audit keys
+- Identifying file access events, downloaded files, and process execution activity through audit logs
+- Investigating potentially malicious network scanning activity by analyzing process and command execution logs
+- Understanding how different Linux log sources can be used during SOC investigations and security triage
+
+## Conclusion
+
+This room provided a good introduction to Linux logging and how different log sources can be used during SOC investigations. I learned how to navigate and analyze important log files such as `syslog`, `auth.log`, package manager logs, Bash history, and auditd logs to identify suspicious activity. I also gained hands-on experience using commands like `grep` and `ausearch` to investigate failed SSH login attempts, user account changes, file access, and process execution. Overall, this room helped me better understand how Linux logs can provide valuable evidence during security investigations and how SOC analysts can use them to detect and investigate potentially malicious activity
