@@ -40,3 +40,5 @@ Explore how attackers break into Linux systems and how you can detect this in lo
 - We know this to be true because it says `Accepted publickey for ubuntu` instead of `Accepted password`. In Linux logs, `publickey` indicates that SSH keys were utilized for the authentication
 
 - Answer: `Yea`
+
+## Task 3
