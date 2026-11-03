@@ -97,3 +97,47 @@ cat /var/log/auth.log | grep sshd | grep "Failed"
 </p>
 
 - Answer: `THM{i_am_vulnerable!}`
+
+### What is the PPID of the suspicious whoami command?
+
+- To search for the PPID of `whoami`, we can use `ausearch -i -x whoami` where `-i` interprets numeric values into human readable text, while `-x` filters audit logs by the executable name `whoami`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1fb7e7c6-825b-4053-9544-0cfc751612e8" />
+</p>
+
+- Answer: `1018`
+
+### Moving up the tree, what is the PID of the TryPingMe app?
+
+- To find the PID of the app, we can move up the process tree until we get to `pid 1` building out a process tree starting with the `whoami` execution under pid `1020`, which was spawned by the shell process running the combined string under pid `1018`, which was spawned  by the parent Python application hosting `main.py` at pid `577`, which itself was directly spawned by the system's root init process at `pid 1`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/a481d354-ba42-4a19-abdc-caad13062769" />
+</p>
+
+- Answer: `577`
+
+### Which program did the attacker use to open a reverse shell?
+
+- To find this out we can filter via the command `ausearch -i --ppid 577` where we list all the processes spawned by this main process. Looking through the logs we can see `ppid `577 spawning a shell session that executes a Python reverse shell payload under `pid 1029`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/13d75558-8c47-4075-977b-bf2f28ac8d30" />
+</p>
+
+- Answer: `Python`
+
+## Task 6
+
+### Which Initial Access technique is likely used if a trusted app suddenly runs malicious commands?
+
+- Attackers compromise a trusted software vendor or application and inject malicious code into a legitimate software update. When users install the update, the malicious code runs on their systems
+
+- Answer: `Supply Chain Compromise`
+
+### Which detection method can you use to detect a variety of Initial Access techniques?
+
+- Defenders monitor the sequence of processes running on a system to identify suspicious parent-child relationships. By analyzing which processes launch other processes and the commands they execute, defenders can detect signs of malicious activity associated with various initial access techniques
+
+- Answer: `Process Tree Analysis`
