@@ -141,3 +141,19 @@ cat /var/log/auth.log | grep sshd | grep "Failed"
 - Defenders monitor the sequence of processes running on a system to identify suspicious parent-child relationships. By analyzing which processes launch other processes and the commands they execute, defenders can detect signs of malicious activity associated with various initial access techniques
 
 - Answer: `Process Tree Analysis`
+
+## Skills Learned
+
+- Analyzing Linux authentication logs to identify successful and failed SSH login attempts
+- Detecting SSH brute force attacks and identifying targeted user accounts
+- Identifying suspicious IP addresses involved in unauthorized access
+- Investigating command injection attempts through system logs
+- Using audit logs and `ausearch` to investigate suspicious process execution
+- Understanding PID and PPID relationships to trace process trees
+- Identifying suspicious child processes spawned by legitimate applications
+- Understanding supply chain compromise as an initial access technique
+- Using process tree analysis to detect suspicious behavior and potential intrusions
+
+## Conclusion
+
+This room provided hands-on experience with Linux threat detection by investigating authentication and audit logs to identify suspicious activity. I learned how to recognize SSH brute force attacks, trace unauthorized access, investigate command injection, and follow process relationships to identify malicious commands and reverse shell activity. Overall, this room improved my understanding of Linux log analysis and how defenders can use process tree analysis and system monitoring to detect potential compromises and respond to threats effectively
