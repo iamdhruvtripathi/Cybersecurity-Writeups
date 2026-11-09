@@ -44,3 +44,34 @@ Explore the first actions of attackers after breaching a Linux server and learn 
 </p>
 
 - Answer: `/var/lib/ultrasec/malscan`
+
+## Task 3
+### What is the path of the script that initiated the "hostname" command?
+
+- We can build a mini process tree starting with `ausearch -i -x hostname`. We can see that the process has a `PID` of `3771`. Next, we can search for that `PID` using `ausearch -i --pid 3771`. Here, we can see that a script named `debug.sh` was executed from the `/home/itsupport` directory
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/12bd9312-b98d-47bb-8b1b-dc4f050986ac" />
+</p>
+
+- Answer: `/home/itsupport/debug.sh`
+
+### What was the last Discovery command launched by the script?
+
+- To search for commands launched by this script we can filter via `ausearch -i --ppid 3771`. We can see that the script executed a `ps` command to list running processes, capturing their process ID, parent process ID, full command name, memory usage, and CPU usage, while sorting the results to place the most resource intensive programs at the top of the list
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/ef5cae86-fb03-4ad0-8120-1a8e126925aa" />
+</p>
+
+- Answer: `ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu`
+
+### Looking at the script content, what's the email of the script author?
+
+- We know that the script is located at `/home/itsupport/debug.sh`. However, when I initially tried to navigate to the `itsupport` directory using the `cd` command, I encountered a permission denied error. To fix this, I switched to the root user using `sudo su`, navigated to the directory, and used the `cat` command to view the contents of the script
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/28717693-64dc-4bb4-9d14-ccfa9467973c" />
+</p>
+
+- Answer: `greg@tryhackme.thm`
