@@ -48,7 +48,7 @@ Explore the first actions of attackers after breaching a Linux server and learn 
 ## Task 3
 ### What is the path of the script that initiated the "hostname" command?
 
-- We can build a mini process tree starting with `ausearch -i -x hostname`. We can see that the process has a `PID` of `3771`. Next, we can search for that `PID` using `ausearch -i --pid 3771`. Here, we can see that a script named `debug.sh` was executed from the `/home/itsupport` directory
+- We can build a mini process tree starting with `ausearch -i -x hostname`. We can see that the process has a `ppid` of `3771`. Next, we can search for that `PID` using `ausearch -i --pid 3771`. Here, we can see that a script named `debug.sh` was executed from the `/home/itsupport` directory
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/12bd9312-b98d-47bb-8b1b-dc4f050986ac" />
