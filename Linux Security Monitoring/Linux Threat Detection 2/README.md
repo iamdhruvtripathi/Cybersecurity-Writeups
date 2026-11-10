@@ -106,3 +106,15 @@ ausearch -i -x curl
 -  In this context, `curl` might be more malicious because attackers commonly use it to download suspicious files or malicious scripts. Here, `curl` may have downloaded a malicious file, while `wget` might have been used to download legitimate software, such as an Elastic Agent
 
 - Answer: `curl`
+
+## Task 5
+
+### Which IP address managed to brute-force the exposed SSH?
+
+- We can use `cat auth.log | grep "Accepted"` to filter for successful SSH authentication attempts. As shown below, one specific IP address appears multiple times, indicating repeated successful logins from the same source IP
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/53c99e3c-511c-4ea4-9a9f-2b1f63979313"/>
+</p>
+
+- Answer: `45.9.148.125`
