@@ -75,3 +75,34 @@ Explore the first actions of attackers after breaching a Linux server and learn 
 </p>
 
 - Answer: `greg@tryhackme.thm`
+
+## Task 4
+### From which domain was the Elastic agent downloaded?
+
+- Attackers can use tools like `wget` or `curl` to download files from the internet. By running `ausearch -i -x wget`, we can search the audit logs and see that the Elastic agent was downloaded from the domain below
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/10bd7a29-8534-46ac-b023-4d016016a57b" />
+</p>
+
+- Answer: `artifacts.elastic.co`
+
+### What is the full path to the downloaded "helper.sh" script?
+
+- Similar to the last question, we can search for `curl` commands to identify the full path where `helper.sh` was downloaded, as specified by the -o flag
+
+```
+ausearch -i -x curl
+```
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/dc57326a-219f-484d-9b48-43a641cf7d61" />
+</p>
+
+- Answer: `/var/tmp/helper.sh`
+
+### Which of the downloaded files is more likely to be malicious: The one downloaded with curl or wget?
+
+-  In this context, `curl` might be more malicious because attackers commonly use it to download suspicious files or malicious scripts. Here, `curl` may have downloaded a malicious file, while `wget` might have been used to download legitimate software, such as an Elastic Agent
+
+- Answer: `curl`
