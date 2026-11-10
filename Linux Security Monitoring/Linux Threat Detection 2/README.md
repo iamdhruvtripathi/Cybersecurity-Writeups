@@ -89,7 +89,7 @@ Explore the first actions of attackers after breaching a Linux server and learn 
 
 ### What is the full path to the downloaded "helper.sh" script?
 
-- Similar to the last question, we can search for `curl` commands to identify the full path where `helper.sh` was downloaded, as specified by the -o flag
+- Similar to the last question, we can search for `curl` commands to identify the full path where `helper.sh` was downloaded, as specified by the `-o` flag
 
 ```
 ausearch -i -x curl
