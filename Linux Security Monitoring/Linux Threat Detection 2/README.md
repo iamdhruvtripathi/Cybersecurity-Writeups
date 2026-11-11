@@ -118,3 +118,66 @@ ausearch -i -x curl
 </p>
 
 - Answer: `45.9.148.125`
+
+### Which command did the attacker use to list the last logged-in users?
+
+- We know that attackers can use different commands to learn more about a system. One of these commands is `last`, which shows the users who have logged in recently
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/49aa26b1-48ee-406d-91f7-d6a7fa2c3a2d" />
+</p>
+
+- Below, we use `ausearch -i -if /home/ubuntu/scenario/audit.log | grep last` to search the audit logs and see where the attacker used the `last` command
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/634f24a1-0d96-4917-bc46-59def554bc89" />
+</p>
+
+- Answer: `last`
+
+### Which three EDR processes did the attacker look for with "egrep"? Answer Format: Separated by a comma, in alphabetical order.
+
+- We can see in the `auditd` logs that the attacker used the `egrep` command multiple times to search for specific EDR processes. We can identify the three EDR processes the attacker was looking for
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/6ca6b825-f2b4-4245-9201-b89196f2b024" />
+</p>
+
+- Answer: `ds_agent,falcon,sentinel`
+
+## Task 6
+
+### What is the name of the malicious archive that was transferred via SCP?
+
+- We can use `ausearch -i -if /home/ubuntu/scenario/audit.log | grep /tmp` to search for activity involving the `/tmp` directory, since attackers often use it to temporarily store and extract files and this can help us find suspicious file activity. Here, we can see that the attacker used the `tar` command to extract an archive into `/tmp/.apt`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/56c52c0c-dd5c-4631-aa53-03210ec4d6c1" />
+</p>
+
+- Answer: `kernupd.tar.gz`
+
+### What was the full command line of the cryptominer launch?
+
+- We can use `ausearch -i -if /home/ubuntu/scenario/audit.log | grep nohup` to search the audit logs for commands containing `nohup`. Attackers often use `nohup` to keep processes running in the background, even after closing the terminal
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/5aa2db77-e19c-490c-87e9-eca377481594" />
+</p>
+
+- Answer: `nohup /tmp/.apt/kernupd/kernupd`
+
+### Which IP address range did the attacker scan for an exposed SSH? Answer Example: 10.0.0.1-10.0.0.126.
+
+- We can see in the auditd logs that the attacker used a Bash loop with `nc` (Netcat) to scan multiple IP addresses for an exposed SSH service on port `22`. The command checks each IP address in the range and looks for successful connections, helping the attacker identify systems with SSH accessible
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/23adf9dd-57c7-4041-98a0-c33531c979d0" />
+</p>
+
+- Answer: `10.10.12.1-10.10.12.10`
+
+## Skills Learned
+
+
+## Conclusion
