@@ -179,7 +179,7 @@ ausearch -i -x curl
 ## Skills Learned
 - Identifying cloud and virtualization environments using `systemd-detect-virt`
 - Enumerating running processes with `ps aux` to identify security tools, EDR agents, and antivirus software
-- Analyzing Linux audit logs with ausearch to investigate suspicious commands and trace parent-child process relationships
+- Analyzing Linux audit logs with `ausearch` to investigate suspicious commands and trace parent-child process relationships
 - Reconstructing process execution chains to identify scripts responsible for launching system commands
 - Inspecting shell scripts to identify their contents, authors, and potentially suspicious activity
 - Investigating file downloads using `wget`, `curl`, and Linux audit logs
