@@ -176,8 +176,19 @@ ausearch -i -x curl
 </p>
 
 - Answer: `10.10.12.1-10.10.12.10`
-
 ## Skills Learned
-
+- Identifying cloud and virtualization environments using `systemd-detect-virt`
+- Enumerating running processes with `ps aux` to identify security tools, EDR agents, and antivirus software
+- Analyzing Linux audit logs with ausearch to investigate suspicious commands and trace parent-child process relationships
+- Reconstructing process execution chains to identify scripts responsible for launching system commands
+- Inspecting shell scripts to identify their contents, authors, and potentially suspicious activity
+- Investigating file downloads using `wget`, `curl`, and Linux audit logs
+- Analyzing SSH authentication logs to identify successful logins and potential brute-force attacks
+- Detecting attacker reconnaissance activities, including user enumeration and EDR process discovery
+- Identifying suspicious files and archives transferred through `scp`
+- Investigating persistence techniques and background process execution using nohup
+- Recognizing cryptomining activity and identifying suspicious binaries running on compromised systems
+- Detecting internal network reconnaissance and SSH port scanning using tools such as Netcat
 
 ## Conclusion
+This room provided hands-on experience investigating post-compromise activities on a Linux system and understanding how attackers operate after gaining initial access. By analyzing authentication logs, auditd events, running processes, and downloaded files, I learned how to reconstruct attacker activity, identify suspicious commands, detect potential security tool discovery and evasion, and recognize malicious activities such as cryptomining and network scanning. Overall, this room strengthened my Linux threat detection and incident investigation skills while demonstrating the importance of properly collecting and analyzing system logs to identify and respond to security threats.
