@@ -41,7 +41,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 
 | Path | Rooms Completed | Status |
 |---|:---:|:---:|
-| 💻 Cyber Security 101 | 12 | ✅ |
+| 💻 Cyber Security 101 | 11 | ✅ |
 | 🔵 SOC Level 1 | 30 / 31 | 🚧 |
 | 🌐 SOC Simulator | 1 | ✅ |
 | 🏝️ Hacker Holidays 2026 | 15 / 15 | ✅ |
