@@ -1,4 +1,4 @@
-<p align="center">
+<img width="1512" height="798" alt="image" src="https://github.com/user-attachments/assets/74765c8f-24d0-4f66-a3e9-83ce91c67b6b" /><p align="center">
   <img src="https://assets.tryhackme.com/img/logo/tryhackme_logo_full.svg" width="150" alt="TryHackMe Logo">
 </p>
 
@@ -57,3 +57,44 @@ Cover the last stages of attacks on Linux and learn how they look in system logs
 
 ## Task 3
 
+### Which command line was used to look for the "pass" keyword in files?
+
+- We can search the log file via `ausearch -i -if /home/ubuntu/scenario/audit.log | grep pass`. Looking at the four lines of output, while `find` searched for filenames containing `pass`, the only command used to look for `pass` inside files was `grep`. The second entry `proctitle=grep -iR pass .` shows `grep` running recursively `-R` and case-insensitively `-i` to search for the string pass within the contents of files in the current directory
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/043f870e-0e12-4898-9c6f-4899acee2e5b" />
+</p>
+
+- Answer: `grep -iR pass .`
+
+### Which command line was used to escalate privileges to root?
+
+- To find how privileges were escalated, we can filter the log for root activity using `ausearch -i -if /home/ubuntu/scenario/audit.log | grep root`. Looking at the first two lines of the output `(proctitle=su root and a0=su a1=root)`, we can see the threat actor used `su root` to switch to the root user
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1048f9b2-782d-47ca-82eb-f1e21e07138e" />
+</p>
+
+- Answer: `su root`
+
+### Looking at the detected .env file, what was the root password?
+
+- We know the attacker read the `.env.local` file as seen below
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/2658758e-6e03-4d2c-a27b-9f42a5d4aa1b" />
+</p>
+
+- Now the question was: where was this file actually located? To search the entire filesystem starting from the root directory, we can run `sudo find / -name ".env.local"`. This shows where the file is located at
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/aa09422f-5567-464b-bfb5-f10699d5ea4e" />
+</p>
+
+- We can navigate to the above location and read the file getting the root's password
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/cf2ae2ed-dd11-4b12-bbe8-c03d2f4248e4" />
+</p>
+
+- Answer: `nGql1pQkGa`
