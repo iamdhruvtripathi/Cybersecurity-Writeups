@@ -98,3 +98,27 @@ Cover the last stages of attacks on Linux and learn how they look in system logs
 </p>
 
 - Answer: `nGql1pQkGa`
+
+## Task 4
+
+### What flag did you get after running the malware persisting as a service?
+
+- Systemd services manage critical background services on Linux, and their configuration files (ending with `.service`) are stored in directories like `/etc/systemd/system/` and `/lib/systemd/system/`. Because any user with root privileges can create or modify a service file in these folders to make malicious payloads survive a reboot, monitoring `/etc/systemd/system` with auditd allows us to catch attackers establishing persistence in real time. Therefore, we can filter the audit logs via `ausearch -i -f /etc/systemd/system/` and notice that there are two services here which are `tux.service` and `badr.service`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7ab2f2cf-eca2-42e4-88eb-1c9850ac935c" />
+</p>
+
+- First, I checked `badr.service` because it was downloaded from the internet using `wget`, and I tried going to `/etc/badr/badr` and `/var/log/badr.log` to investigate further. However, both gave a `No such file or directory` error because the service is actually TryHackMe's own setup tool and automatically deletes its files after 10 seconds (`sleep 10 && rm -f`). Since this was a dead end, I moved on to look at `tux.service` instead
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/cb3df236-925d-4491-9495-e4b3b31100c5" />
+</p>
+
+- We can check `/etc/systemd/system/tux.service` using `cat tux.service` and see that its `ExecStart` points to a binary located at `/var/lib/misc/tux`. I navigated to `/var/lib/misc`, confirmed with file tux that it was a 64-bit Linux executable, and ran `./tux`. It prompted me for the location where the persistence was established, and entering `/etc/systemd/system/tux.service` revealed the flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/9d222df3-b532-4019-992d-8356998fb4a1" />
+</p>
+
+- Answer: `THM{hidden_penguin!}`
