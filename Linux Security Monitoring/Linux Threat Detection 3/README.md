@@ -122,3 +122,25 @@ Cover the last stages of attacks on Linux and learn how they look in system logs
 </p>
 
 - Answer: `THM{hidden_penguin!}`
+
+### What flag did you get after running the malware persisting as a cron job?
+
+-  We can look for cron-based persistence by filtering the audit logs with `ausearch -i -f /var/spool/cron`. Cron jobs are one of the most common ways attackers maintain persistence on Linux because they execute commands automatically on a schedule or at system reboot (`@reboot`). Monitoring `/var/spool/cron` with auditd catches any unauthorized edits made to user crontab files. The search results showed a `crontab -e` command creating a temporary file inside `/var/spool/cron/crontabs/`. Since accessing the crontabs directory requires elevated privileges, I switched to the root user (`sudo su`), navigated to `/var/spool/cron/crontabs`, and found a root ASCII text file containing the scheduled jobs
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/61321906-e00f-4c17-a956-6697e9ab9e0c" />
+</p>
+
+- Below we can see that payload binary is located at `/usr/sbin/phoenix`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e38bcff0-1c5b-4fed-a6d2-1fd64e32ea88" />
+</p>
+
+- Viewing the file with `cat root` revealed a `@reboot /usr/sbin/phoenix` entry at the bottom, which executes the binary every time the system starts. I navigated to `/usr/sbin/`, verified that phoenix was a 64-bit Linux executable using file phoenix, and ran `./phoenix`. When prompted for where it persisted, entering /var/spool/cron/crontabs/root gave the flag
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/a7c3e0c6-9c42-4bf7-a26b-7cceac26126f" />
+</p>
+
+- Answer: `THM{ressurect_on_reboot!}`
