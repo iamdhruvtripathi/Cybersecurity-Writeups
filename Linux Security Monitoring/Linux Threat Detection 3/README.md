@@ -137,7 +137,7 @@ Cover the last stages of attacks on Linux and learn how they look in system logs
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e38bcff0-1c5b-4fed-a6d2-1fd64e32ea88" />
 </p>
 
-Then, I navigated to `/usr/sbin/`, verified that phoenix was a 64-bit Linux executable using file phoenix, and ran `./phoenix`. When prompted for where it persisted, entering `/var/spool/cron/crontabs/root` gave the flag
+- Then, I navigated to `/usr/sbin/`, verified that phoenix was a 64-bit Linux executable using file phoenix, and ran `./phoenix`. When prompted for where it persisted, entering `/var/spool/cron/crontabs/root` gave the flag
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/a7c3e0c6-9c42-4bf7-a26b-7cceac26126f" />
