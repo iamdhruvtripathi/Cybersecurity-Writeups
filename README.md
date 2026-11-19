@@ -42,7 +42,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 | Path | Rooms Completed | Status |
 |---|:---:|:---:|
 | 💻 Cyber Security 101 | 11 | ✅ |
-| 🔵 SOC Level 1 | 30 / 31 | 🚧 |
+| 🔵 SOC Level 1 | 31 / 32 | 🚧 |
 | 🌐 SOC Simulator | 1 | ✅ |
 | 🏝️ Hacker Holidays 2026 | 15 / 15 | ✅ |
 
@@ -100,7 +100,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 | 🐧 **[Linux Security Monitoring](./Linux%20Security%20Monitoring)** | [Linux Logging for SOC](./Linux%20Security%20Monitoring/Linux%20Logging%20for%20SOC/README.md) | 📘 |
 | | [Linux Threat Detection 1](Linux%20Security%20Monitoring/Linux%20Threat%20Detection%201/README.md) | 📘 |
 | | [Linux Threat Detection 2](Linux%20Security%20Monitoring/Linux%20Threat%20Detection%202/README.md) | 📘 |
-| | [Linux Threat Detection 3](Linux%20Security%20Monitoring/Linux%20Threat%20Detection%203/README.md) | 🚧 |
+| | [Linux Threat Detection 3](Linux%20Security%20Monitoring/Linux%20Threat%20Detection%203/README.md) | 📘 |
 
 ---
 
