@@ -181,3 +181,20 @@ Cover the last stages of attacks on Linux and learn how they look in system logs
 ### Should you learn Linux threats even if working with Windows? (Yea/Nay)
 
 - Answer: `Yea`
+
+## Skills
+
+- Identifying and analysing OS command injection vulnerabilities
+- Investigating reverse shell activity using auditd logs
+- Using `ausearch` and `grep` to filter and analyse Linux audit logs
+- Detecting suspicious command execution and credential discovery
+- Identifying privilege escalation attempts and unauthorised root access
+- Investigating exposed credentials in environment files
+- Detecting persistence mechanisms through malicious systemd services and cron jobs
+- Analysing Linux authentication logs to identify suspicious user creation and privilege changes
+- Detecting SSH key-based persistence through modifications to `authorized_keys`
+- Understanding Linux malware, ransomware and common post-exploitation techniques
+
+## Conclusion
+
+In this room, I learned how to investigate the later stages of attacks against Linux systems by analysing system and audit logs. I explored how attackers exploit OS command injection to execute commands and establish reverse shells, search for sensitive information, escalate privileges, and maintain persistence through malicious systemd services, cron jobs and SSH keys. I also gained practical experience using tools such as `ausearch` and `grep` to identify suspicious activity and trace attacker behaviour. Overall, this room strengthened my understanding of Linux threat detection and highlighted the importance of monitoring system activity, protecting sensitive credentials and recognising persistence techniques to investigate and respond to security incidents effectively
