@@ -148,4 +148,36 @@ Cover the last stages of attacks on Linux and learn how they look in system logs
 ## Task 5
 ### Which user was created and added to the sudo group?
 
+- We can check `/var/log/auth.log` for user creation and modification events using `grep -E 'useradd|usermod'`. The log shows that a new user named `koichi` was created with the home directory `/home/koichi`. The `usermod` command was used to add `koichi` to the `sudo` group, granting the user administrative privileges
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/a66dc63f-eaa3-4042-90a0-9a028fe750a0" />
+</p>
+
+- Answer: `koichi`
+
 ### Which file was changed to allow SSH key persistence?
+
+- We can see below in the audit log that the `ubuntu` user ran a `bash` session with `root` access and added information to the `/root/.ssh/authorized_keys`
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/e12ab483-f16d-49b7-8407-e89251a99ac1" />
+</p>
+
+- Answer: `/root/.ssh/authorized_keys`
+
+## Task 6
+
+### Does Linux ransomware exist and impact organizations worldwide? (Yea/Nay)
+
+- Yes, as stated Linux ransomware is growing and targets critical infrastructure like physical hypervisors that host virtual machines. Compromise of just a few underlying Linux servers can lock down hundreds of corporate systems at once, impacting organizations globally
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/7d5e5528-909b-4c78-8847-35e625939078" />
+</p>
+
+- Answer: `Yea`
+
+### Should you learn Linux threats even if working with Windows? (Yea/Nay)
+
+- Answer: `Yea`
