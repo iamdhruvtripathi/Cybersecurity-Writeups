@@ -145,7 +145,7 @@ Cover the last stages of attacks on Linux and learn how they look in system logs
 
 - Answer: `THM{ressurect_on_reboot!}`
 
-### Task 5
-## Which user was created and added to the sudo group?
+## Task 5
+### Which user was created and added to the sudo group?
 
-## Which file was changed to allow SSH key persistence?
+### Which file was changed to allow SSH key persistence?
