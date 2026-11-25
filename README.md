@@ -112,7 +112,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 
 ---
 
-## 🏝️ CTF Events: Hacker Holidays 2026
+<h1 align="center">🎄 Advent of Cyber 2026 – TryHackMe</h1>
 
 <p align="center">
   <img width="90%" alt="Hacker Holidays 2026 banner" src="https://github.com/user-attachments/assets/375edf0d-74c3-4d03-8440-4c02803afe95" />
@@ -152,6 +152,50 @@ The story is set at The Byte Lotus 🪷, a fictional five-star resort with a *"z
 | 13 | [After Hours](./Hacker%20Holidays%202026/After%20Hours/README.md) | ✅ |
 | 14 | [The Guestbook](./Hacker%20Holidays%202026/The%20Guestbook/README.md) | ✅ |
 | 15 | [Management Wants a Word](./Hacker%20Holidays%202026/Management%20Wants%20a%20Word/README.md) | ✅ |
+
+---
+<h1 align="center">🎄 Advent of Cyber 2026 – TryHackMe</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/TryHackMe-Advent%20of%20Cyber%202026-212C42?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe"/>
+  <img src="https://img.shields.io/badge/Event-December%201--24%2C%202026-C11111?style=for-the-badge&logo=adventofcode&logoColor=white" alt="Event"/>
+  <img src="https://img.shields.io/badge/Challenges-24-1E90FF?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Challenges"/>
+  <img src="https://img.shields.io/badge/Level-Beginner-2ECC71?style=for-the-badge&logo=target&logoColor=white" alt="Difficulty"/>
+  <img src="https://img.shields.io/badge/Category-Cybersecurity-8A2BE2?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Category"/>
+  <img src="https://img.shields.io/badge/Status-Coming%20Soon-FF9800?style=for-the-badge&logo=clockify&logoColor=white" alt="Status"/>
+</p>
+
+## 🎅 Check the computer
+
+**Happy holidays. You're on call.**
+
+Everyone in Wareville got the same email: a fully paid December off. They all took it. Now the town's empty, IT is out of office, and someone's inside the network. You're the only one who stayed. Your mission? Save it, one challenge at a time. From 1 to 24 December, unlock a new free, beginner-friendly cybersecurity challenge every day. Complete challenges, uncover what's happening in Wareville, and earn entries into over $200,000 in prizes along the way.
+
+## 📅 Event Details
+
+| Detail | Information |
+|---|---|
+| Event | Advent of Cyber 2026 |
+| Platform | TryHackMe |
+| Start Date | Tuesday 1st December 2026 |
+| End Date | Thursday 24th December 2026 |
+| Release Time | Every day at 4PM GMT |
+| Challenges | 24 |
+| Difficulty | Beginner-friendly |
+| Cost | Free |
+| Prizes | $200,000+ |
+
+## 🎯 Challenges & Writeups
+
+A new cybersecurity challenge unlocks every day from 1st to 24th December.
+
+### Example Challenge
+
+| Room | Topic | Status |
+|---|---|---|
+| Day 1 | Introduction to Advent of Cyber | 🔒 Coming Soon |
+
+*Room names and challenge details will be added as they become available.*
 
 ---
 
