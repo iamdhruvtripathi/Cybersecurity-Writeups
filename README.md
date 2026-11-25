@@ -173,6 +173,8 @@ Happy holidays. You're on call.
 
 Everyone in Wareville got the same email: a fully paid December off. They all took it. Now the town's empty, IT is out of office, and someone's inside the network. You're the only one who stayed. Your mission? Save it, one challenge at a time. From 1 to 24 December, unlock a new free, beginner-friendly cybersecurity challenge every day. Complete challenges, uncover what's happening in Wareville, and earn entries into over $200,000 in prizes along the way.
 
+🔗 **Event page:** [Advent of Cyber 2026](https://tryhackme.com/adventofcyber26)
+
 ## 📅 Event Details
 
 | Detail | Information |
