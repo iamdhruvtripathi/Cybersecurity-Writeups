@@ -33,7 +33,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 - [💻 Cyber Security 101](#-cyber-security-101)
 - [🔵 SOC Level 1](#-soc-level-1)
 - [🌐 SOC Simulator](#-soc-simulator)
-- [🏝️ CTF Events: Hacker Holidays 2026](#️-ctf-events-hacker-holidays-2026)
+- [🏝️ CTF Events: Hacker Holidays 2026](#️-hacker-holidays-2026)
 
 ---
 
@@ -181,8 +181,6 @@ Everyone in Wareville got the same email: a fully paid December off. They all to
 | Release Time | Every day at 4PM GMT |
 | Challenges | 24 |
 | Difficulty | Beginner-friendly |
-| Cost | Free |
-| Prizes | $200,000+ |
 
 ## 🎯 Challenges & Writeups
 
