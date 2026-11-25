@@ -114,7 +114,13 @@ Snow Trail is a pre-event room for TryHackMe's Advent of Cyber 2026. It gives pa
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/fcf32bbb-424a-4072-84c0-709de5b543ec" />
 </p>
 
-- With 3/5 Clues found, I opened the next email for `Task 4: Restore evidence image`, which includes a scrambled image file that needs to be rebuilt to reveal where it was taken. After checking the case file to confirm which machine is built for rebuilding recovered image files, we can click `Send to device` to route it over to the desktop
+- With 3/5 Clues found, I opened the next email for `Task 4: Restore evidence image`, which includes a scrambled image file that needs to be rebuilt to reveal where it was taken
+
+<p align="center">
+<img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1bb489f5-1397-4dbe-8cb3-023b883856cd" />
+</p>
+
+- After checking the case file to confirm which machine is built for rebuilding recovered image files, we can click `Send to device` to route it over to the desktop
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8d6b3265-f51e-4580-bc6b-027b05c69216" />
