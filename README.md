@@ -187,9 +187,9 @@ A new cybersecurity challenge unlocks every day from 1st to 24th December.
 
 ### Example Challenge
 
-| Room | Topic | Status |
-|---|---|---|
-| Day 1 | Introduction to Advent of Cyber | 🔒 Coming Soon |
+| Day | Room | Status |
+|:---:|---|:---:|
+| Pre-event | [Snow Trail](./Advent%20of%20Cyber%202026/README.md) | ✅ |
 
 *Room names and challenge details will be added as they become available.*
 
