@@ -162,7 +162,6 @@ The story is set at The Byte Lotus 🪷, a fictional five-star resort with a *"z
   <img src="https://img.shields.io/badge/Challenges-24-1E90FF?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Challenges"/>
   <img src="https://img.shields.io/badge/Level-Beginner-2ECC71?style=for-the-badge&logo=target&logoColor=white" alt="Difficulty"/>
   <img src="https://img.shields.io/badge/Category-Cybersecurity-8A2BE2?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Category"/>
-  <img src="https://img.shields.io/badge/Status-Coming%20Soon-FF9800?style=for-the-badge&logo=clockify&logoColor=white" alt="Status"/>
 </p>
 
 ## 🎅 Check the computer
