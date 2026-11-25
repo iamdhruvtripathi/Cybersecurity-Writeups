@@ -126,7 +126,7 @@ Snow Trail is a pre-event room for TryHackMe's Advent of Cyber 2026. It gives pa
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/8d6b3265-f51e-4580-bc6b-027b05c69216" />
 </p>
 
-- I walked over to the desktop and ran the I`mage Rebuilder tool`, which finished unscrambling the photo to reveal a map location pinned right on `Wareville`. Now we can click `Add to case file` to lock in our fourth clue and move on to the final task
+- I walked over to the desktop and ran the `Image Rebuilder tool`, which finished unscrambling the photo to reveal a map location pinned right on `Wareville`. Now we can click `Add to case file` to lock in our fourth clue and move on to the final task
 
 <p align="center">
 <img width="90%" height="90%" alt="image" src="https://github.com/user-attachments/assets/1684b948-e3cf-4623-a2e3-293fe589d304" />
