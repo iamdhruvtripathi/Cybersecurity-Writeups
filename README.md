@@ -34,7 +34,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 - [🔵 SOC Level 1](#-soc-level-1)
 - [🌐 SOC Simulator](#-soc-simulator)
 - [🏝️ CTF Events: Hacker Holidays 2026](#️-hacker-holidays-2026)
-- [🏝️ CTF Events: Hacker Holidays 2026](#️-advent-of-cyber-2026)
+- [🎄 Advent of Cyber 2026](#️-advent-of-cyber-2026)
 
 ---
 
