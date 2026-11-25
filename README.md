@@ -34,8 +34,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 - [🔵 SOC Level 1](#-soc-level-1)
 - [🌐 SOC Simulator](#-soc-simulator)
 - [🏝️ CTF Events: Hacker Holidays 2026](#️-hacker-holidays-2026)
-- [🎄 Advent of Cyber 2026](#️-advent-of-cyber-2026)
-
+- [🎄 Advent of Cyber 2026](#advent-of-cyber-2026)
 ---
 
 ## 📊 Progress
@@ -155,6 +154,7 @@ The story is set at The Byte Lotus 🪷, a fictional five-star resort with a *"z
 | 15 | [Management Wants a Word](./Hacker%20Holidays%202026/Management%20Wants%20a%20Word/README.md) | ✅ |
 
 ---
+<a id="advent-of-cyber-2026"></a>
 <h1 align="center">🎄 Advent of Cyber 2026</h1>
 
 <p align="center">
