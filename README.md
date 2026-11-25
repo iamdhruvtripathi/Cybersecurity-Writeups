@@ -112,7 +112,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 
 ---
 
-<h1 align="center">🏝️ CTF Events: Hacker Holidays 2026</h1>
+<h1 align="center">🏝️ Hacker Holidays 2026</h1>
 
 <p align="center">
   <img width="90%" alt="Hacker Holidays 2026 banner" src="https://github.com/user-attachments/assets/375edf0d-74c3-4d03-8440-4c02803afe95" />
