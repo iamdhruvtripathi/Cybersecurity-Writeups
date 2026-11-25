@@ -112,7 +112,7 @@ This repository collects all of my public TryHackMe writeups: guided walkthrough
 
 ---
 
-## 🏝️ Hacker Holidays 2026
+<h1 align="center">🏝️ Hacker Holidays 2026</h1>
 
 <p align="center">
   <img width="90%" alt="Hacker Holidays 2026 banner" src="https://github.com/user-attachments/assets/375edf0d-74c3-4d03-8440-4c02803afe95" />
@@ -155,7 +155,7 @@ The story is set at The Byte Lotus 🪷, a fictional five-star resort with a *"z
 
 ---
 <a id="advent-of-cyber-2026"></a>
-## 🎄 Advent of Cyber 2026
+<h1 align="center">🎄 Advent of Cyber 2026</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/TryHackMe-Advent%20of%20Cyber%202026-212C42?style=for-the-badge&logo=tryhackme&logoColor=white" alt="TryHackMe"/>
